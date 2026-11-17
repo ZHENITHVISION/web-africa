@@ -558,8 +558,43 @@ Je souhaite échanger avec vous pour concrétiser ce projet.`;
     }
   }
 
-  // Écouteurs d'événements
+  // Écouteurs d'événements exhaustifs (change + input + click direct pour mobile/touch)
   form.addEventListener('change', recalculate);
+  form.addEventListener('input', recalculate);
+
+  // Clic tactile / souris direct sur les cartes et options
+  document.querySelectorAll('.formula-box').forEach(box => {
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', (e) => {
+      const radio = box.querySelector('input[name="site_type"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        recalculate();
+      }
+    });
+  });
+
+  document.querySelectorAll('.page-btn-item').forEach(item => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', (e) => {
+      const radio = item.querySelector('input[type="radio"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        recalculate();
+      }
+    });
+  });
+
+  document.querySelectorAll('.option-row').forEach(row => {
+    row.style.cursor = 'pointer';
+    row.addEventListener('click', (e) => {
+      const radio = row.querySelector('input[type="radio"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        recalculate();
+      }
+    });
+  });
 
   // Initialisation au chargement
   initFromURL();

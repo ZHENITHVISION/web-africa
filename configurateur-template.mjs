@@ -389,6 +389,5 @@ export function getConfigurateurHtml(isSubSection = false) {
     </form>
   </div>
 </div>
-<script type="module" src="/configurateur.js"></script>
 `;
 }
