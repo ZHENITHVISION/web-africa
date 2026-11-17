@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restau Savana — Restaurant Gastronomique & Grillades à Ouagadougou</title>
+  <meta name="description" content="Savourez l'art culinaire africain et sahélien dans un cadre d'exception à Ouagadougou. Poulet bicyclette, capitaine braisé, terrasse lounge et réservation WhatsApp.">
+  <link rel="stylesheet" href="/fonts.css">
+  <script src="/demos/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            savana: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            terracotta: {
+              500: '#e0533c',
+              600: '#c23b22',
+              700: '#9a2e1a',
+            },
+            dark: {
+              900: '#0c0e12',
+              800: '#141820',
+              700: '#1e2430',
+              600: '#2a3242',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-dark {
+      background: rgba(20, 24, 32, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #e0533c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-stone-200 font-sans antialiased selection:bg-savana-500 selection:text-dark-900">
+
+  <!-- Bandeau Démo WEB AFRICA -->
+  <style>
+    .wa-demo-bar{background:#0f172a;color:#ffffff;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.15);position:sticky;top:0;z-index:99999;font-family:sans-serif;flex-wrap:wrap;gap:8px;}
+    @media(max-width:640px){.wa-demo-bar{flex-direction:column;align-items:stretch;text-align:center;padding:8px 12px;}.wa-demo-bar>div{justify-content:center!important;}}
+  </style>
+  <div class="wa-demo-bar">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <span style="background:#f59e0b;color:#0f172a;font-weight:700;padding:2px 8px;border-radius:9999px;font-size:10px;letter-spacing:0.05em;text-transform:uppercase;">MODÈLE RESTAURANT &amp; GRILLADES</span>
+      <span style="color:#cbd5e1;font-size:12px;">Conçu par WEB AFRICA · En 3 à 7 jours</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <a href="https://wa.me/22669291337?text=Bonjour%20Abdoul%20Salam%2C%20je%20regarde%20la%20d%C3%A9mo%20Restau%20Savana%20et%20je%20souhaite%20un%20devis%20pour%20mon%20restaurant." target="_blank" rel="noopener" style="background:#10b981;color:#ffffff;font-weight:600;padding:5px 14px;border-radius:9999px;text-decoration:none;font-size:12px;display:inline-flex;align-items:center;gap:4px;">Commander sur WhatsApp ↗</a>
+      <a href="/demonstrations/" style="color:#94a3b8;text-decoration:none;font-size:12px;">← Retour</a>
+    </div>
+  </div>
+
+
+
+  <!-- Top Bar Contact & Statut -->
+  <aside class="bg-savana-600 text-dark-900 text-xs font-semibold py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-950 animate-pulse"></span>
+        <span>🟢 Ouvert aujourd'hui · 11h30 - 23h30</span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline">📍 Ouaga 2000, Avenue Pascal Zagre, Ouagadougou</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+22669291337" class="hover:underline flex items-center gap-1">📞 +226 69 29 13 37</a>
+        <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20je%20souhaite%20r%C3%A9server%20une%20table." target="_blank" class="bg-dark-900 text-savana-400 px-2.5 py-0.5 rounded-full hover:bg-black transition">WhatsApp Direct</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- En-tête Navigation -->
+  <header class="sticky top-0 z-50 glass-dark border-b border-white/10 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-savana-400 to-terracotta-600 flex items-center justify-center text-dark-900 font-extrabold text-xl shadow-lg shadow-savana-500/20">
+            S
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-2xl tracking-wide text-white">SAVANA</span>
+            <span class="text-[10px] uppercase tracking-widest text-savana-400 font-semibold">Restaurant & Lounge · Ouaga</span>
+          </div>
+        </a>
+
+        <!-- Liens Bureau -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#accueil" class="text-white hover:text-savana-400 transition">Accueil</a>
+          <a href="#menu" class="text-stone-300 hover:text-savana-400 transition">La Carte</a>
+          <a href="#specialites" class="text-stone-300 hover:text-savana-400 transition">Nos Spécialités</a>
+          <a href="#cadre" class="text-stone-300 hover:text-savana-400 transition">Le Cadre</a>
+          <a href="#avis" class="text-stone-300 hover:text-savana-400 transition">Avis</a>
+          <a href="#contact" class="text-stone-300 hover:text-savana-400 transition">Contact</a>
+        </nav>
+
+        <!-- Boutons d'action -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#reservation" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-savana-500 to-savana-600 hover:from-savana-400 hover:to-savana-500 text-dark-900 font-bold text-sm shadow-lg shadow-savana-500/25 transition transform hover:-translate-y-0.5">
+            Réserver une table
+          </a>
+        </div>
+
+        <!-- Bouton Menu Mobile -->
+        <button id="mobileMenuBtn" class="md:hidden text-white p-2 rounded-lg bg-dark-800 border border-white/10" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+      <!-- Menu déroulant Mobile -->
+      <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="#accueil" class="text-white py-2 hover:text-savana-400 transition">Accueil</a>
+        <a href="#menu" class="text-stone-300 py-2 hover:text-savana-400 transition">La Carte</a>
+        <a href="#specialites" class="text-stone-300 py-2 hover:text-savana-400 transition">Nos Spécialités</a>
+        <a href="#cadre" class="text-stone-300 py-2 hover:text-savana-400 transition">Le Cadre & Ambiance</a>
+        <a href="#reservation" class="w-full text-center py-3 rounded-full bg-savana-500 text-dark-900 font-bold mt-2">Réserver une table</a>
+        <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20je%20souhaite%20passer%20une%20commande." target="_blank" class="w-full text-center py-3 rounded-full border border-savana-500 text-savana-400 font-semibold">Commander sur WhatsApp ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+      <!-- Image de fond avec filtre immersif -->
+      <div class="absolute inset-0 z-0">
+        <img src="/photos/restau-img-1.jpg" alt="Grillades et braisés gastronomiques" class="w-full h-full object-cover opacity-25 scale-105 animate-pulse duration-[10000ms]">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-dark-900/40"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.15)_0,transparent_70%)]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <!-- Chapeau Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-savana-500/30 text-savana-400 text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
+          <span>✨</span> HAUTE GASTRONOMIE SAHÉLIENNE & GRILLADES AU FEU DE BOIS
+        </div>
+
+        <!-- Titre principal -->
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-4xl leading-[1.15] mb-6">
+          L'Élégance Culinaire d'Afrique, <span class="text-gradient">au Cœur de Ouaga.</span>
+        </h1>
+
+        <!-- Sous-titre -->
+        <p class="text-stone-300 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+          Vivez une expérience gastronomique mémorable : poulet bicyclette croustillant, capitaine braisé du Mouhoun, cocktails signatures et terrasse VIP sous les étoiles de Ouagadougou.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <a href="#reservation" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-savana-500 to-terracotta-500 hover:from-savana-400 hover:to-terracotta-400 text-dark-900 font-extrabold text-base shadow-xl shadow-savana-500/25 transition transform hover:scale-105">
+            📅 Réserver une table
+          </a>
+          <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-base backdrop-blur-md transition">
+            🍽️ Consulter la Carte
+          </a>
+          <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20je%20veux%20passer%20une%20commande%20en%20livraison." target="_blank" class="w-full sm:w-auto px-6 py-4 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition">
+            <span>WhatsApp</span> ↗
+          </a>
+        </div>
+
+        <!-- Chiffres clés / Réassurance -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 w-full max-w-4xl text-left">
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-2xl sm:text-3xl text-savana-400">100% Frais</span>
+            <span class="text-xs text-stone-400 mt-1">Produits du terroir burkinabè</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-2xl sm:text-3xl text-savana-400">Terrasse VIP</span>
+            <span class="text-xs text-stone-400 mt-1">Cadre intime & salon climatisé</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-2xl sm:text-3xl text-savana-400">4.9 / 5</span>
+            <span class="text-xs text-stone-400 mt-1">+850 clients conquis</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-2xl sm:text-3xl text-savana-400">7j / 7</span>
+            <span class="text-xs text-stone-400 mt-1">Service midi & soir en continu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Nos Spécialités Phares -->
+    <section id="specialites" class="py-20 bg-dark-800 border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Savoir-Faire du Chef</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+            Les Signatures de la Savane
+          </h2>
+          <p class="text-stone-400 text-sm sm:text-base mt-4">
+            Une fusion harmonieuse entre traditions culinaires du Sahel et techniques gastronomiques modernes.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Carte 1 -->
+          <article class="bg-dark-700/60 rounded-2xl overflow-hidden border border-white/10 hover:border-savana-500/50 transition-all group flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="/photos/restau-img-2.jpg" alt="Poulet Bicyclette Braisé Savana" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+              <div class="absolute top-4 right-4 bg-savana-500 text-dark-900 font-black text-xs px-3 py-1.5 rounded-full shadow">
+                4 500 FCFA
+              </div>
+              <div class="absolute bottom-4 left-4 bg-dark-900/80 backdrop-blur-md px-3 py-1 rounded text-xs text-stone-300">
+                Spécialité N°1
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-serif font-bold text-xl text-white group-hover:text-savana-400 transition">
+                Poulet Bicyclette Braisé Savana
+              </h3>
+              <p class="text-stone-400 text-sm mt-3 leading-relaxed flex-grow">
+                Volaille locale élevée au grand air, marinée 24h aux épices sauvages de Dédougou, grillée lentement au feu de bois. Servi avec alloco fondant et piment doux maison.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <span class="text-xs text-stone-400">Accompagnement au choix</span>
+                <a href="https://wa.me/22669291337?text=Bonjour%2C%20je%20veux%20commander%20le%20Poulet%20Bicyclette%20Brais%C3%A9%20Savana." target="_blank" class="text-savana-400 hover:text-savana-300 font-bold text-xs flex items-center gap-1">
+                  Commander ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 2 -->
+          <article class="bg-dark-700/60 rounded-2xl overflow-hidden border border-white/10 hover:border-savana-500/50 transition-all group flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="/photos/restau-img-3.jpg" alt="Capitaine Braisé Royal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+              <div class="absolute top-4 right-4 bg-savana-500 text-dark-900 font-black text-xs px-3 py-1.5 rounded-full shadow">
+                6 000 FCFA
+              </div>
+              <div class="absolute bottom-4 left-4 bg-dark-900/80 backdrop-blur-md px-3 py-1 rounded text-xs text-stone-300">
+                Pêche du Jour
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-serif font-bold text-xl text-white group-hover:text-savana-400 transition">
+                Capitaine Braisé du Mouhoun
+              </h3>
+              <p class="text-stone-400 text-sm mt-3 leading-relaxed flex-grow">
+                Pavé généreux de poisson capitaine frais, saisi à la perfection, assaisonné d'ail rôti, de gingembre et de citron vert. Servi avec attiéké à l'huile rouge ou frites d'igname.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <span class="text-xs text-stone-400">Texture tendre & parfumée</span>
+                <a href="https://wa.me/22669291337?text=Bonjour%2C%20je%20veux%20commander%20le%20Capitaine%20Brais%C3%A9." target="_blank" class="text-savana-400 hover:text-savana-300 font-bold text-xs flex items-center gap-1">
+                  Commander ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 3 -->
+          <article class="bg-dark-700/60 rounded-2xl overflow-hidden border border-white/10 hover:border-savana-500/50 transition-all group flex flex-col">
+            <div class="relative h-60 overflow-hidden">
+              <img src="/photos/restau-img-4.jpg" alt="Côtelettes d'Agneau Façon Suya" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+              <div class="absolute top-4 right-4 bg-savana-500 text-dark-900 font-black text-xs px-3 py-1.5 rounded-full shadow">
+                5 500 FCFA
+              </div>
+              <div class="absolute bottom-4 left-4 bg-dark-900/80 backdrop-blur-md px-3 py-1 rounded text-xs text-stone-300">
+                Viande d'Élite
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="font-serif font-bold text-xl text-white group-hover:text-savana-400 transition">
+                Côtelettes d'Agneau Façon Suya
+              </h3>
+              <p class="text-stone-400 text-sm mt-3 leading-relaxed flex-grow">
+                Agneau du Sahel sélectionné, panure d'épices Kankan authentiques, rôti au charbon de bois. Servi avec oignons doux croquants et sauce tomate mijotée.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <span class="text-xs text-stone-400">Saveur fumée unique</span>
+                <a href="https://wa.me/22669291337?text=Bonjour%2C%20je%20veux%20commander%20les%20C%C3%B4telettes%20d%27Agneau." target="_blank" class="text-savana-400 hover:text-savana-300 font-bold text-xs flex items-center gap-1">
+                  Commander ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Menu Complet avec Onglets Interactifs -->
+    <section id="menu" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Saveurs & Gourmandises</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2">
+              La Carte Complète
+            </h2>
+          </div>
+          
+          <!-- Filtres de Catégories -->
+          <div class="flex flex-wrap gap-2" id="menuFilters">
+            <button class="filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-savana-500 text-dark-900 transition" data-filter="all">Tous les Plats</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-dark-700 text-stone-300 hover:bg-dark-600 transition" data-filter="entrees">Entrées & Tapas</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-dark-700 text-stone-300 hover:bg-dark-600 transition" data-filter="braises">Braisés & Grillades</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-dark-700 text-stone-300 hover:bg-dark-600 transition" data-filter="plats">Plats Sahéliens</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-dark-700 text-stone-300 hover:bg-dark-600 transition" data-filter="boissons">Boissons & Cocktails</button>
+          </div>
+        </div>
+
+        <!-- Liste des Plats du Menu -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="menuList">
+          <!-- Entrée 1 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="entrees">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Pastels Croustillants au Poisson</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">2 500 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Beignets farcis au thon frais épicé, accompagnés de notre sauce piment doux mijotée (6 pièces).</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Pastels%20Croustillants" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Entrée 2 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="entrees">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Salade Mangue & Avocat du Pays</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">3 000 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Tranches de mangue du Houet, avocat crémeux, tomates cerises et vinaigrette au citron vert & miel sauvage.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Salade%20Mangue%20Avocat" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Braisé 1 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="braises">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Demi-Poulet Fermier Braisé</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">3 500 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Assaisonnement traditionnel, grillé à point, servi avec alloco ou frites de pommes de terre locales.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Demi%20Poulet%20Brais%C3%A9" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Braisé 2 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="braises">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Brochettes de Filet de Bœuf (Suya)</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">4 000 F</span>
+              </div>
+              <p class="text-xs text-stone-400">3 brochettes généreuses de filet de zébu tendre aux épices du Sahel, oignons caramélisés et moutarde douce.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Brochettes%20de%20Boeuf" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Plat 1 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="plats">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Riz Gras Royal au Mouton Confit</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">4 000 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Riz mijoté au bouillon de viande riche, morceaux de mouton fondants, carottes, chou et piments entiers.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Riz%20Gras%20Royal" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Plat 2 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="plats">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Sauce Gombo Frais & Bœuf Fondant</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">3 800 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Gombo vert pilé, poisson séché de fumoir, bœuf braisé. Servi avec tô de maïs blanc ou riz blanc parfumé.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Sauce%20Gombo" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Boisson 1 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="boissons">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Cocktail Savana Sunset (Signature)</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">2 000 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Infusion de fleurs d'hibiscus (Bissap), gingembre frais pressé, menthe poivrée et coulis de fruit de la passion.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Savana%20Sunset" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+
+          <!-- Boisson 2 -->
+          <div class="menu-item bg-dark-800/80 p-5 rounded-xl border border-white/5 flex gap-4 items-center justify-between hover:border-savana-500/30 transition" data-category="boissons">
+            <div class="flex-grow">
+              <div class="flex items-baseline justify-between mb-1">
+                <h4 class="font-serif font-bold text-lg text-white">Dégué Onctueux au Yaourt Frais</h4>
+                <span class="font-mono font-bold text-savana-400 ml-4">1 500 F</span>
+              </div>
+              <p class="text-xs text-stone-400">Semoule de petit mil cuite à la vapeur, yaourt crémeux parfumé à la muscade et vanille de Madagascar.</p>
+            </div>
+            <a href="https://wa.me/22669291337?text=Commande%3A%20Degue%20Onctueux" target="_blank" class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 hover:bg-savana-500 hover:text-dark-900 text-stone-300 flex items-center justify-center text-sm transition" title="Commander">+</a>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <p class="text-stone-400 text-sm mb-4">Envie d'un plat spécifique ou d'une commande traiteur pour un événement ?</p>
+          <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20je%20souhaite%20un%20devis%20traiteur%20ou%20une%20commande%20sp%C3%A9ciale." target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-savana-500/20 text-savana-400 border border-savana-500/40 hover:bg-savana-500/30 transition text-sm font-semibold">
+            <span>💬 Échanger sur WhatsApp pour un menu sur mesure</span> ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Le Cadre & Ambiance -->
+    <section id="cadre" class="py-20 bg-dark-800 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Une Atmosphère Unique</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 leading-tight">
+              Un Refuge d'Élégance au Cœur de la Ville.
+            </h2>
+            <p class="text-stone-300 text-base mt-6 leading-relaxed">
+              Conçu pour vos déjeuners d'affaires discrets, vos dîners romantiques ou vos soirées détendues entre amis, Restau Savana marie l'authenticité des matériaux sahéliens (brique de terre cuite, bois précieux, végétation luxuriante) avec un confort acoustique et thermique parfait.
+            </p>
+            <div class="space-y-4 mt-8">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-savana-500/20 text-savana-400 flex items-center justify-center font-bold text-sm">✓</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Terrasse Lounge VIP</h4>
+                  <p class="text-xs text-stone-400 mt-1">Sous la brise du soir, avec éclairage tamisé et musique acoustique douce le week-end.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-savana-500/20 text-savana-400 flex items-center justify-center font-bold text-sm">✓</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Salons Privés Climatisés</h4>
+                  <p class="text-xs text-stone-400 mt-1">Espaces confidentiels pour 6 à 25 personnes avec écran pour réunions professionnelles.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-full bg-savana-500/20 text-savana-400 flex items-center justify-center font-bold text-sm">✓</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Parking Sécurisé & Service Voiturier</h4>
+                  <p class="text-xs text-stone-400 mt-1">Gardiennage 24h/24 pour la totale tranquillité de votre véhicule.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galerie Cadre -->
+          <div class="grid grid-cols-2 gap-4">
+            <img src="/photos/restau-img-5.jpg" alt="Salle de restaurant contemporaine" class="rounded-2xl object-cover h-64 w-full shadow-lg">
+            <img src="/photos/restau-img-6.jpg" alt="Table dressée gastronomique" class="rounded-2xl object-cover h-64 w-full shadow-lg translate-y-6">
+            <img src="/photos/restau-img-7.jpg" alt="Terrasse de nuit élégante" class="rounded-2xl object-cover h-64 w-full shadow-lg">
+            <img src="/photos/restau-img-8.jpg" alt="Chef cuisinant au feu de bois" class="rounded-2xl object-cover h-64 w-full shadow-lg translate-y-6">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Réservation de Table Instantanée -->
+    <section id="reservation" class="py-20 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-gradient-to-b from-dark-800 to-dark-700 p-8 sm:p-12 rounded-3xl border border-white/10 shadow-2xl">
+          <div class="text-center max-w-xl mx-auto mb-10">
+            <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Réservation Directe</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+              Réservez Votre Table
+            </h2>
+            <p class="text-stone-300 text-sm mt-3">
+              Remplissez ce formulaire rapide : votre demande sera confirmée instantanément via WhatsApp.
+            </p>
+          </div>
+
+          <form id="bookingForm" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="bName" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Votre Nom Complet *</label>
+              <input type="text" id="bName" required placeholder="Ex. : Ousmane Sawadogo" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="bPhone" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Numéro WhatsApp / Téléphone *</label>
+              <input type="tel" id="bPhone" required placeholder="Ex. : +226 70 00 00 00" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="bDate" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Date du Repas *</label>
+              <input type="date" id="bDate" required class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="bTime" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Heure d'arrivée *</label>
+              <select id="bTime" required class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+                <option value="">Sélectionnez une heure</option>
+                <option value="12:00">12h00 (Déjeuner)</option>
+                <option value="12:30">12h30</option>
+                <option value="13:00">13h00</option>
+                <option value="13:30">13h30</option>
+                <option value="19:30">19h30 (Dîner)</option>
+                <option value="20:00">20h00</option>
+                <option value="20:30">20h30</option>
+                <option value="21:00">21h00</option>
+                <option value="21:30">21h30</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bGuests" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Nombre de Personnes</label>
+              <select id="bGuests" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+                <option value="1 personne">1 personne</option>
+                <option value="2 personnes" selected>2 personnes (Duo)</option>
+                <option value="3-4 personnes">3 à 4 personnes</option>
+                <option value="5-8 personnes">5 à 8 personnes (Famille/Amis)</option>
+                <option value="Plus de 8 personnes">Plus de 8 personnes (Groupe VIP)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bZone" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Espace Souhaité</label>
+              <select id="bZone" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+                <option value="Terrasse Plein Air">🌿 Terrasse Plein Air (Brise du soir)</option>
+                <option value="Salle Principale Climatisée">❄️ Salle Principale Climatisée</option>
+                <option value="Salon Privé VIP">👑 Salon Privé VIP (Calme & Discrétion)</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="bNotes" class="block text-xs font-bold uppercase tracking-wider text-stone-300 mb-2">Demandes particulières (optionnel)</label>
+              <input type="text" id="bNotes" placeholder="Anniversaire, table isolée, préférences alimentaires..." class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-savana-500 focus:outline-none">
+            </div>
+
+            <div class="sm:col-span-2 mt-4">
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-savana-500 to-terracotta-500 hover:from-savana-400 hover:to-terracotta-400 text-dark-900 font-extrabold text-base shadow-xl shadow-savana-500/25 transition flex items-center justify-center gap-2">
+                <span>Confirmer ma réservation sur WhatsApp</span> ↗
+              </button>
+              <p class="text-[11px] text-stone-400 text-center mt-3">
+                🔒 Aucun paiement en ligne requis. Vous recevrez la confirmation de table en quelques minutes.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis Clients -->
+    <section id="avis" class="py-20 bg-dark-800 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Témoignages</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Ce Que Disent Nos Convives</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-dark-900/80 p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <p class="text-stone-300 text-sm italic leading-relaxed">
+              « Le meilleur poulet bicyclette de tout Ouaga ! La marinade est exceptionnelle et le service sur la terrasse est irréprochable. C'est devenu notre adresse fétiche le vendredi soir. »
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-savana-500 text-dark-900 font-bold flex items-center justify-center">MK</div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Moussa Kaboré</h5>
+                <p class="text-xs text-stone-400">Directeur PME · Ouaga 2000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-dark-900/80 p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <p class="text-stone-300 text-sm italic leading-relaxed">
+              « J'ai organisé l'anniversaire de mon épouse dans le salon privé. Tout était parfait : le capitaine braisé était sublime et l'équipe a été aux petits soins. Bravo au Chef ! »
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-terracotta-500 text-white font-bold flex items-center justify-center">AT</div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Aminata Traoré</h5>
+                <p class="text-xs text-stone-400">Consultante internationale</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-dark-900/80 p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+            <p class="text-stone-300 text-sm italic leading-relaxed">
+              « Très belle surprise à Ouaga ! Le cocktail Savana Sunset avec le bissap et le gingembre est à tomber. Décoration très soignée et accueil très chaleureux. »
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-savana-600 text-dark-900 font-bold flex items-center justify-center">JD</div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Jean-David B.</h5>
+                <p class="text-xs text-stone-400">Client fidèle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Localisation -->
+    <section id="contact" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-savana-400 text-xs font-bold uppercase tracking-widest">Nous Trouver</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+              Venez Partager un Bon Moment
+            </h2>
+            <p class="text-stone-300 text-sm mt-4 leading-relaxed">
+              Nous sommes situés dans le quartier résidentiel et paisible de Ouaga 2000, à 5 minutes des grands hôtels et du monument des Héros Nationaux.
+            </p>
+
+            <div class="space-y-6 mt-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-savana-400 text-lg">📍</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Adresse</h4>
+                  <p class="text-sm text-stone-400 mt-1">Avenue Pascal Zagre, face ambassades, Ouaga 2000, Ouagadougou, Burkina Faso</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-savana-400 text-lg">🕒</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Horaires d'Ouverture</h4>
+                  <p class="text-sm text-stone-400 mt-1">Du Lundi au Dimanche : 11h30 – 15h00 & 18h30 – 23h30</p>
+                  <p class="text-xs text-savana-400 mt-0.5">Service bar & lounge non-stop le week-end</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-dark-800 border border-white/10 flex items-center justify-center text-savana-400 text-lg">📞</div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Contact Rapide</h4>
+                  <p class="text-sm text-stone-400 mt-1">Téléphone : <a href="tel:+22669291337" class="text-white hover:underline">+226 69 29 13 37</a> / <a href="tel:+22665414899" class="text-white hover:underline">+226 65 41 48 99</a></p>
+                  <p class="text-sm text-stone-400">WhatsApp : <a href="https://wa.me/22669291337" target="_blank" class="text-savana-400 hover:underline">+226 69 29 13 37</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte / Google Map visuel illustratif -->
+          <div class="bg-dark-800 rounded-3xl p-6 border border-white/10 shadow-xl flex flex-col justify-between min-h-[380px] relative overflow-hidden">
+            <div class="relative z-10">
+              <span class="inline-block px-3 py-1 rounded-full bg-savana-500 text-dark-900 text-xs font-bold mb-3">Zone Ouaga 2000</span>
+              <h3 class="font-serif font-bold text-2xl text-white">Accès Facile & Parking Privé</h3>
+              <p class="text-xs text-stone-300 mt-2">Idéalement positionné sur l'artère principale avec repères visibles et gardiennage dédié.</p>
+            </div>
+            
+            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 relative h-48 bg-dark-900 flex items-center justify-center">
+              <img src="/photos/restau-img-9.jpg" alt="Plan de localisation Ouagadougou" class="w-full h-full object-cover opacity-60">
+              <div class="absolute inset-0 bg-dark-900/40"></div>
+              <div class="absolute flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-savana-500 text-dark-900 flex items-center justify-center font-bold text-xl shadow-lg animate-bounce">
+                  📍
+                </div>
+                <span class="bg-dark-900/90 text-white font-bold text-xs px-3 py-1 rounded-full border border-savana-500/50 mt-2 shadow">
+                  RESTAU SAVANA
+                </span>
+              </div>
+            </div>
+
+            <div class="relative z-10 flex gap-3">
+              <a href="https://maps.google.com/?q=Ouaga+2000+Ouagadougou" target="_blank" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs text-center transition">
+                Ouvrir sur Google Maps ↗
+              </a>
+              <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20pouvez-vous%20m%27envoyer%20votre%20localisation%20exacte%20%3F" target="_blank" class="w-full py-3 rounded-xl bg-savana-500 hover:bg-savana-400 text-dark-900 font-bold text-xs text-center transition">
+                Demander l'itinéraire WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="bg-dark-900 border-t border-white/10 py-12 text-xs text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-savana-500 flex items-center justify-center text-dark-900 font-black text-sm">S</div>
+        <div>
+          <span class="font-serif font-bold text-lg text-white">RESTAU SAVANA</span>
+          <p class="text-[11px] text-stone-400">Haute cuisine & grillades sahéliennes · Ouagadougou, Burkina Faso</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-stone-300">
+        <a href="#accueil" class="hover:text-savana-400">Accueil</a>
+        <a href="#menu" class="hover:text-savana-400">La Carte</a>
+        <a href="#reservation" class="hover:text-savana-400">Réservation</a>
+        <a href="#contact" class="hover:text-savana-400">Contact & Accès</a>
+      </div>
+
+      <p class="text-stone-400 text-center md:text-right">
+        © 2026 Restau Savana. Tous droits réservés.<br>
+        Créé avec fierté à Ouagadougou par <strong class="text-stone-300">WEB AFRICA</strong>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp Flottant -->
+  <a href="https://wa.me/22669291337?text=Bonjour%20Restau%20Savana%2C%20je%20souhaite%20r%C3%A9server%20ou%20passer%20une%20commande." target="_blank" class="fixed right-5 bottom-5 z-50 flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-4 py-3 rounded-full shadow-2xl shadow-emerald-950 transition transform hover:scale-105" aria-label="WhatsApp Restau Savana">
+    <span class="text-lg">💬</span>
+    <span>WhatsApp Restau Savana</span>
+  </a>
+
+  <!-- Script Interactif pour les Filtres et la Réservation -->
+  <script>
+    // Menu Mobile
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Filtres du Menu
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-savana-500', 'text-dark-900');
+          b.classList.add('bg-dark-700', 'text-stone-300');
+        });
+        button.classList.add('active', 'bg-savana-500', 'text-dark-900');
+        button.classList.remove('bg-dark-700', 'text-stone-300');
+
+        const filter = button.dataset.filter;
+        menuItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Formulaire de Réservation vers WhatsApp
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('bName').value;
+      const phone = document.getElementById('bPhone').value;
+      const date = document.getElementById('bDate').value;
+      const time = document.getElementById('bTime').value;
+      const guests = document.getElementById('bGuests').value;
+      const zone = document.getElementById('bZone').value;
+      const notes = document.getElementById('bNotes').value;
+
+      const message = `Bonjour Restau Savana ! 👋\nJe souhaite réserver une table :\n\n👤 *Nom :* ${name}\n📞 *Téléphone :* ${phone}\n📅 *Date :* ${date}\n🕒 *Heure :* ${time}\n👥 *Couverts :* ${guests}\n📍 *Espace :* ${zone}${notes ? `\n📝 *Notes :* ${notes}` : ''}\n\nMerci de me confirmer la disponibilité !`;
+
+      const whatsappUrl = `https://wa.me/22669291337?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+/**
+ * CONFIGURATEUR DE DEVIS — TEMPLATE HTML
+ * Architecture tarifaire officielle WEB AFRICA :
+ * - Étape 1 : Choix de formule
+ *   * Pack Vitrine Essentiel (119 000 FCFA, 3 à 5 pages incluses, statique ultra-rapide)
+ *   * Pack Vitrine Pro + Admin (Dès 250 000 FCFA, 5 à 10 pages administrables, jusqu'à 450 000 FCFA)
+ * - Étape 2 : Volume de pages
+ *   * Essentiel : 3, 4, 5 pages (Inclus 0 F), 6 à 10 pages (+20 000 F / page suppl.)
+ *   * Pro + Admin : 5 pages (250 000 F), 6 (290 000 F), 7 (330 000 F), 8 (370 000 F), 9 (410 000 F), 10 pages (450 000 F)
+ * - Étape 3 : Option Espace Membre & Authentification (Supplément +200 000 à +550 000 FCFA)
+ *   * Aucun (0 F)
+ *   * Espace Membre Standard (+200 000 F)
+ *   * Espace Membre + Rôles (+350 000 F)
+ *   * Espace Membre Complet + Dépôt de Dossiers (+550 000 F)
+ * - Étape 4 : Référencement SEO (Base inclus 0 FCFA ou Spécifique ciblé +15 000 FCFA)
+ * - Étape 5 : Besoins spécifiques complémentaires (Section sombre Sur devis)
+ * - Notice Budget < 100 000 FCFA
+ * - Étape 6 : Récapitulatif complet et SOMME TOTALE EN BAS
+ */
+
+export function getConfigurateurHtml(isSubSection = false) {
+  const heroHtml = isSubSection ? '' : `
+  <section class="config-hero-sober">
+    <div class="config-container">
+      <div class="breadcrumb">
+        <a href="/">Accueil</a> <span aria-hidden="true"> / </span> Estimateur
+      </div>
+      <div class="eyebrow">WEB AFRICA · Ouagadougou, Burkina Faso</div>
+      <h1>Estimez votre projet de site web en direct.</h1>
+      <p class="lead">Choisissez votre formule et vos options. Votre devis se calcule automatiquement en temps réel et votre somme totale s'affiche avec le récapitulatif complet juste en bas de la page.</p>
+    </div>
+  </section>`;
+
+  return `
+<div class="config-page ${isSubSection ? 'config-page-embedded' : ''}">
+  ${heroHtml}
+
+  <div class="config-container config-flow-container">
+    <form id="configurator-form" class="config-vertical-flow" onsubmit="return false;">
+      
+      <!-- ÉTAPE 1 : CHOIX DE LA FORMULE PRINCIPALE -->
+      <section class="config-block" id="block-site">
+        <span class="config-step-number">Étape 1 · Votre formule principale</span>
+        <h2>Choisissez votre formule de site web</h2>
+        <p class="config-block-desc">Sélectionnez la base adaptée aux besoins de votre entreprise au Burkina Faso :</p>
+
+        <div class="formula-rectangles-grid">
+          <!-- Rectangle Pack Vitrine Essentiel -->
+          <label class="formula-box selected" for="site-essentiel">
+            <input type="radio" name="site_type" value="essentiel" id="site-essentiel" checked>
+            <div class="formula-box-content">
+              <span class="formula-box-tag">3 à 5 pages · Statique Rapide</span>
+              <h3 class="formula-box-title">Pack Vitrine Essentiel</h3>
+              <div class="formula-box-price">119 000 <span>FCFA</span></div>
+              <p class="formula-box-detail">Site statique ultra-rapide, formulaire de contact, bouton WhatsApp 1-clic, nom de domaine .com standard et hébergement 1 an offerts*, SEO local de base.</p>
+            </div>
+          </label>
+
+          <!-- Rectangle Pack Vitrine Pro + Admin -->
+          <label class="formula-box" for="site-pro-admin">
+            <input type="radio" name="site_type" value="pro_admin" id="site-pro-admin">
+            <div class="formula-box-content">
+              <span class="formula-box-tag">5 à 10 pages · Espace Admin</span>
+              <h3 class="formula-box-title">Pack Vitrine Pro + Admin</h3>
+              <div class="formula-box-price">250 000 à 450 000 <span>FCFA</span></div>
+              <p class="formula-box-detail">Tout le Pack Essentiel + tableau de bord simple et sécurisé pour modifier vous-même certains textes et photos en toute autonomie. Évolutif jusqu'à 10 pages.</p>
+            </div>
+          </label>
+        </div>
+
+        <!-- SÉLECTEUR DE PAGES POUR PACK VITRINE ESSENTIEL (3 à 5 incluses, puis +20 000 FCFA/page supplémentaire de 6 à 10) -->
+        <div class="pages-picker-wrap" id="pages-essentiel-substep">
+          <div class="pages-picker-header">
+            <div>
+              <label class="pages-picker-title">Nombre de pages pour votre Pack Vitrine Essentiel :</label>
+              <p class="pages-picker-subtitle">Le forfait comprend 3 à 5 pages incluses (ex : Accueil, Services, Présentation, Réalisations, Contact). Pages supplémentaires à +20 000 FCFA/page.</p>
+            </div>
+            <div class="pages-current-badge" id="badge-pages-essentiel">3 pages (Inclus dans le forfait)</div>
+          </div>
+
+          <div class="pages-buttons-grid">
+            <label class="page-btn-item selected" for="pe-3">
+              <input type="radio" name="pages_essentiel" value="3" id="pe-3" checked>
+              <span class="p-num">3 pages</span>
+              <span class="p-sub">Inclus</span>
+            </label>
+            <label class="page-btn-item" for="pe-4">
+              <input type="radio" name="pages_essentiel" value="4" id="pe-4">
+              <span class="p-num">4 pages</span>
+              <span class="p-sub">Inclus</span>
+            </label>
+            <label class="page-btn-item" for="pe-5">
+              <input type="radio" name="pages_essentiel" value="5" id="pe-5">
+              <span class="p-num">5 pages</span>
+              <span class="p-sub">Inclus</span>
+            </label>
+            <label class="page-btn-item" for="pe-6">
+              <input type="radio" name="pages_essentiel" value="6" id="pe-6">
+              <span class="p-num">6 pages</span>
+              <span class="p-sub">+20 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pe-7">
+              <input type="radio" name="pages_essentiel" value="7" id="pe-7">
+              <span class="p-num">7 pages</span>
+              <span class="p-sub">+40 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pe-8">
+              <input type="radio" name="pages_essentiel" value="8" id="pe-8">
+              <span class="p-num">8 pages</span>
+              <span class="p-sub">+60 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pe-9">
+              <input type="radio" name="pages_essentiel" value="9" id="pe-9">
+              <span class="p-num">9 pages</span>
+              <span class="p-sub">+80 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pe-10">
+              <input type="radio" name="pages_essentiel" value="10" id="pe-10">
+              <span class="p-num">10 pages</span>
+              <span class="p-sub">+100 000 F</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SÉLECTEUR DE PAGES POUR PACK VITRINE PRO + ADMIN (5 à 10 pages : 250 000 à 450 000 FCFA) -->
+        <div class="pages-picker-wrap" id="pages-pro-substep" style="display:none;">
+          <div class="pages-picker-header">
+            <div>
+              <label class="pages-picker-title">Nombre de pages pour votre Pack Vitrine Pro + Admin :</label>
+              <p class="pages-picker-subtitle">Base 5 pages avec espace administration sécurisé à 250 000 FCFA. Chaque page supplémentaire jusqu'à 10 pages est à +40 000 FCFA (10 pages = 450 000 FCFA).</p>
+            </div>
+            <div class="pages-current-badge" id="badge-pages-pro">5 pages (250 000 FCFA)</div>
+          </div>
+
+          <div class="pages-buttons-grid">
+            <label class="page-btn-item selected" for="pp-5">
+              <input type="radio" name="pages_pro" value="5" id="pp-5" checked>
+              <span class="p-num">5 pages</span>
+              <span class="p-sub">250 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pp-6">
+              <input type="radio" name="pages_pro" value="6" id="pp-6">
+              <span class="p-num">6 pages</span>
+              <span class="p-sub">290 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pp-7">
+              <input type="radio" name="pages_pro" value="7" id="pp-7">
+              <span class="p-num">7 pages</span>
+              <span class="p-sub">330 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pp-8">
+              <input type="radio" name="pages_pro" value="8" id="pp-8">
+              <span class="p-num">8 pages</span>
+              <span class="p-sub">370 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pp-9">
+              <input type="radio" name="pages_pro" value="9" id="pp-9">
+              <span class="p-num">9 pages</span>
+              <span class="p-sub">410 000 F</span>
+            </label>
+            <label class="page-btn-item" for="pp-10">
+              <input type="radio" name="pages_pro" value="10" id="pp-10">
+              <span class="p-num">10 pages</span>
+              <span class="p-sub">450 000 F</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÉTAPE 2 : OPTION ESPACE MEMBRE & AUTHENTIFICATION (Supplément cumulable) -->
+      <section class="config-block" id="block-member">
+        <span class="config-step-number">Étape 2 · Espace Membre &amp; Authentification</span>
+        <h2>Option Espace Membre, Base de Données &amp; Dépôt de Dossiers</h2>
+        <p class="config-block-desc">Cette option s'ajoute sous forme de supplément (au Pack Vitrine Essentiel ou au Pack Pro + Admin) pour les plateformes nécessitant des comptes sécurisés :</p>
+
+        <div class="options-list">
+          <!-- Aucun espace membre -->
+          <label class="option-row selected" for="member-none">
+            <input type="radio" name="member_level" value="none" id="member-none" checked>
+            <div class="option-body">
+              <div class="option-head">
+                <strong>Aucun espace membre (Site public standard)</strong>
+                <span class="option-price-tag tag-inclus">0 FCFA</span>
+              </div>
+              <p>Votre site est ouvert et accessible directement par tous vos visiteurs sans nécessité de connexion ni de mot de passe. Idéal pour une vitrine directe.</p>
+            </div>
+          </label>
+
+          <!-- Espace membre standard : +200 000 FCFA -->
+          <label class="option-row" for="member-standard">
+            <input type="radio" name="member_level" value="standard" id="member-standard">
+            <div class="option-body">
+              <div class="option-head">
+                <strong>Espace Membre Standard (+200 000 FCFA)</strong>
+                <span class="option-price-tag">+200 000 FCFA</span>
+              </div>
+              <p>Authentification sécurisée des utilisateurs (e-mail/mot de passe ou connexion Google), base de données cloud sécurisée (Firebase / backend sécurisé) et espace profil membre privé.</p>
+            </div>
+          </label>
+
+          <!-- Espace membre avec rôles : +350 000 FCFA -->
+          <label class="option-row" for="member-roles">
+            <input type="radio" name="member_level" value="roles" id="member-roles">
+            <div class="option-body">
+              <div class="option-head">
+                <strong>Espace Membre + Définition des Rôles (+350 000 FCFA)</strong>
+                <span class="option-price-tag">+350 000 FCFA</span>
+              </div>
+              <p>Tout l'Espace Membre Standard + système de gestion de rôles et permissions différenciées (ex : Administrateur, Membre standard, Recruteur / Gestionnaire, Partenaire).</p>
+            </div>
+          </label>
+
+          <!-- Espace membre complet + dépôt de dossiers : +550 000 FCFA -->
+          <label class="option-row" for="member-dossiers">
+            <input type="radio" name="member_level" value="dossiers" id="member-dossiers">
+            <div class="option-body">
+              <div class="option-head">
+                <strong>Espace Membre Complet + Dépôt de Dossiers &amp; Documents (+550 000 FCFA)</strong>
+                <span class="option-price-tag">+550 000 FCFA</span>
+              </div>
+              <p>Authentification sécurisée + gestion des rôles + espace privé pour téléverser, consulter, traiter et valider des dossiers (candidatures, pièces jointes PDF, documents confidentiels) avec statut de suivi.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- ÉTAPE 3 : RÉFÉRENCEMENT NATUREL (SEO) -->
+      <section class="config-block" id="block-seo">
+        <span class="config-step-number">Étape 3 · Référencement Google (SEO)</span>
+        <h2>Niveau de visibilité Google</h2>
+        <p class="config-block-desc">Sélectionnez le niveau d'optimisation pour les recherches locales au Burkina Faso :</p>
+
+        <div class="options-list">
+          <!-- SEO de base inclus -->
+          <label class="option-row selected" for="seo-base">
+            <input type="radio" name="seo_level" value="base" id="seo-base" checked>
+            <div class="option-body">
+              <div class="option-head">
+                <strong>SEO de base inclus dans votre pack</strong>
+                <span class="option-price-tag tag-inclus">Inclus (0 FCFA)</span>
+              </div>
+              <p>Titres, balises métadonnées, structure sémantique HTML5 et balisage Schema.org pour le référencement local standard à Ouagadougou et au Burkina Faso.</p>
+            </div>
+          </label>
+
+          <!-- SEO spécifique par cible : +15 000 FCFA -->
+          <label class="option-row" for="seo-cible">
+            <input type="radio" name="seo_level" value="cible" id="seo-cible">
+            <div class="option-body">
+              <div class="option-head">
+                <strong>SEO spécifique par cible (+15 000 FCFA)</strong>
+                <span class="option-price-tag">+15 000 FCFA</span>
+              </div>
+              <p>Recherche sémantique approfondie, mots-clés de niche ciblés sur vos activités stratégiques et optimisation du maillage interne pour accélérer votre découverte.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- ÉTAPE 4 : BESOINS SPÉCIFIQUES COMPLÉMENTAIRES (SUR DEVIS) -->
+      <section class="config-dark-box" id="block-custom">
+        <span class="config-step-number" style="color:#38bdf8;">Étape 4 · Fonctionnalités avancées sur mesure</span>
+        <h2>Besoins spécifiques &amp; intégrations métiers (Sur devis)</h2>
+        <p class="config-dark-desc">
+          Ces fonctionnalités nécessitent une étude technique selon vos processus spécifiques. <strong>Elles ne sont pas comptées dans le total automatique ci-dessous pour ne pas fausser votre calcul.</strong> Cochez simplement celles qui vous intéressent pour notre échange :
+        </p>
+
+        <div class="dark-options-grid">
+          <!-- Catalogue de produits -->
+          <div class="dark-option-card">
+            <div class="dark-option-head">
+              <strong>Catalogue de produits</strong>
+              <span class="dark-badge-devis">Sur devis</span>
+            </div>
+            <p>Présentation structurée de vos articles avec photos, fiches détaillées, prix en FCFA et commande directe via WhatsApp.</p>
+            <label class="dark-option-check">
+              <input type="checkbox" name="custom_interests" value="Catalogue de produits">
+              <span>Mentionner dans mon devis</span>
+            </label>
+          </div>
+
+          <!-- Système de réservation -->
+          <div class="dark-option-card">
+            <div class="dark-option-head">
+              <strong>Système de réservation</strong>
+              <span class="dark-badge-devis">Sur devis</span>
+            </div>
+            <p>Prise de rendez-vous en ligne avec calendrier ou réservation de table / prestation de service.</p>
+            <label class="dark-option-check">
+              <input type="checkbox" name="custom_interests" value="Système de réservation">
+              <span>Mentionner dans mon devis</span>
+            </label>
+          </div>
+
+          <!-- Intégration d'API -->
+          <div class="dark-option-card">
+            <div class="dark-option-head">
+              <strong>Intégration d'API &amp; Outils tiers</strong>
+              <span class="dark-badge-devis">Sur devis</span>
+            </div>
+            <p>Connexion technique à vos logiciels de gestion, CRM, facturation ou services externes.</p>
+            <label class="dark-option-check">
+              <input type="checkbox" name="custom_interests" value="Intégration d’API">
+              <span>Mentionner dans mon devis</span>
+            </label>
+          </div>
+
+          <!-- Formulaires métiers avancés -->
+          <div class="dark-option-card">
+            <div class="dark-option-head">
+              <strong>Modules métiers spécifiques</strong>
+              <span class="dark-badge-devis">Sur devis</span>
+            </div>
+            <p>Calculateurs métiers, formulaires multi-étapes avec pièces jointes ou flux sur-mesure.</p>
+            <label class="dark-option-check">
+              <input type="checkbox" name="custom_interests" value="Modules métiers spécifiques">
+              <span>Mentionner dans mon devis</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNIÈRE BUDGET INFÉRIEUR À 100 000 FCFA -->
+      <div class="sub-100k-banner config-sub-100k">
+        <div class="sub-100k-content">
+          <span class="sub-100k-tag">BUDGET FLEXIBLE · PROJETS DE DÉPART</span>
+          <h3>Votre budget est inférieur à 100 000 FCFA ?</h3>
+          <p>Vous avez besoin d’une page de présentation simple (One Page synthétique), d’une carte de visite digitale ou d’un lancement à budget serré ? Contactez-nous directement pour un devis personnalisé adapté à vos moyens.</p>
+        </div>
+        <a class="btn-popy-glass sub-100k-btn" href="https://wa.me/22669291337?text=Bonjour%20WEB%20AFRICA%2C%20mon%20budget%20est%20inf%C3%A9rieur%20%C3%A0%20100%20000%20FCFA%2C%20je%20souhaite%20un%20devis%20personnalis%C3%A9." target="_blank" rel="noopener noreferrer">
+          <span>Échanger sur WhatsApp pour un devis sur-mesure</span> <span class="arrow">↗</span>
+        </a>
+      </div>
+
+      <!-- ÉTAPE 5 : RÉCAPITULATIF PROFORMA & SOMME TOTALE (JUSTE EN BAS) -->
+      <section class="config-final-summary" id="final-summary-block">
+        <div class="summary-top-header">
+          <div>
+            <span class="config-step-number" style="color:#059669;">Récapitulatif en direct</span>
+            <h2>Détail de votre devis &amp; Somme Totale</h2>
+            <p class="summary-top-desc">Voici la synthèse complète de votre configuration. Le montant total en FCFA se calcule en direct.</p>
+          </div>
+          <span class="summary-agency-tag">WEB AFRICA</span>
+        </div>
+
+        <div class="summary-proforma-table" id="proforma-lines">
+          <!-- Rempli en direct par configurateur.js -->
+        </div>
+
+        <!-- Note si options sur devis sélectionnées -->
+        <div class="summary-custom-notes" id="proforma-custom-notes" style="display:none;">
+          <div class="summary-custom-head">
+            <strong>Besoins spécifiques cochés (À chiffrer sur devis selon cahier des charges) :</strong>
+          </div>
+          <div class="summary-custom-tags" id="proforma-custom-list"></div>
+        </div>
+
+        <!-- Grand bloc Montant Total -->
+        <div class="summary-total-banner">
+          <div class="total-banner-left">
+            <span class="total-banner-label">Montant Total Estimé</span>
+            <div class="total-banner-price" id="proforma-total-price">119 000 <small>FCFA</small></div>
+            <div class="total-banner-terms">Conditions de règlement : <strong>50% à la commande · 50% à la livraison</strong> après validation.</div>
+          </div>
+          <div class="total-banner-right">
+            <a class="btn-whatsapp-primary" id="btn-whatsapp" href="https://wa.me/22669291337" target="_blank" rel="noopener noreferrer">
+              <span>Échanger avec WEB AFRICA sur WhatsApp</span>
+              <span class="arrow-sym">→</span>
+            </a>
+            <button type="button" class="btn-copy-secondary" id="btn-copy">
+              Copier les détails de ce devis
+            </button>
+            <p id="copy-status" class="summary-copy-msg" role="status"></p>
+          </div>
+        </div>
+
+        <div class="summary-footer-signature">
+          <div class="signature-person">
+            <strong>WEB AFRICA · Studio Digital Créatif</strong>
+            <span>Création de sites web professionnels &amp; solutions digitales à Ouagadougou</span>
+          </div>
+          <div class="signature-contacts">
+            <span>Téléphone &amp; WhatsApp : <strong>+226 69 29 13 37</strong> / <strong>+226 65 41 48 99</strong></span>
+            <span>Quartier Garghin, Ouagadougou, Burkina Faso · Réponse sous 24h ouvrées.</span>
+          </div>
+        </div>
+      </section>
+
+    </form>
+  </div>
+</div>
+<script type="module" src="/configurateur.js"></script>
+`;
+}

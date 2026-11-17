@@ -1,0 +1,86 @@
+[
+  {
+    "file": "dist/demos/btp/index.html",
+    "url": "/demos/btp/"
+  },
+  {
+    "file": "dist/demos/btp/services/index.html",
+    "url": "/demos/btp/services/"
+  },
+  {
+    "file": "dist/demos/btp/explorer/index.html",
+    "url": "/demos/btp/explorer/"
+  },
+  {
+    "file": "dist/demos/btp/contact/index.html",
+    "url": "/demos/btp/contact/"
+  },
+  {
+    "file": "dist/demos/cabinet/index.html",
+    "url": "/demos/cabinet/"
+  },
+  {
+    "file": "dist/demos/cabinet/services/index.html",
+    "url": "/demos/cabinet/services/"
+  },
+  {
+    "file": "dist/demos/cabinet/explorer/index.html",
+    "url": "/demos/cabinet/explorer/"
+  },
+  {
+    "file": "dist/demos/cabinet/contact/index.html",
+    "url": "/demos/cabinet/contact/"
+  },
+  {
+    "file": "dist/demos/restaurant/index.html",
+    "url": "/demos/restaurant/"
+  },
+  {
+    "file": "dist/demos/restaurant/services/index.html",
+    "url": "/demos/restaurant/services/"
+  },
+  {
+    "file": "dist/demos/restaurant/explorer/index.html",
+    "url": "/demos/restaurant/explorer/"
+  },
+  {
+    "file": "dist/demos/restaurant/contact/index.html",
+    "url": "/demos/restaurant/contact/"
+  },
+  {
+    "file": "dist/demos/btp/detail-1/index.html",
+    "url": "/demos/btp/detail-1/"
+  },
+  {
+    "file": "dist/demos/btp/detail-2/index.html",
+    "url": "/demos/btp/detail-2/"
+  },
+  {
+    "file": "dist/demos/btp/detail-3/index.html",
+    "url": "/demos/btp/detail-3/"
+  },
+  {
+    "file": "dist/demos/cabinet/detail-1/index.html",
+    "url": "/demos/cabinet/detail-1/"
+  },
+  {
+    "file": "dist/demos/cabinet/detail-2/index.html",
+    "url": "/demos/cabinet/detail-2/"
+  },
+  {
+    "file": "dist/demos/cabinet/detail-3/index.html",
+    "url": "/demos/cabinet/detail-3/"
+  },
+  {
+    "file": "dist/demos/restaurant/detail-1/index.html",
+    "url": "/demos/restaurant/detail-1/"
+  },
+  {
+    "file": "dist/demos/restaurant/detail-2/index.html",
+    "url": "/demos/restaurant/detail-2/"
+  },
+  {
+    "file": "dist/demos/restaurant/detail-3/index.html",
+    "url": "/demos/restaurant/detail-3/"
+  }
+]

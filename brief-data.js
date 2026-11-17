@@ -1,0 +1,91 @@
+export const common=[
+{id:'nom',label:'Votre nom et prénom',required:true,auto:'name'},
+{id:'entreprise',label:'Nom de l’entreprise, de la marque ou du projet',required:true,auto:'organization'},
+{id:'telephone',label:'Votre numéro WhatsApp avec indicatif',required:true,type:'tel',auto:'tel',placeholder:'Ex. : +226 70 00 00 00'},
+{id:'email',label:'Votre adresse e-mail',type:'email',auto:'email'},
+{id:'activite',label:'Que faites-vous et que proposez-vous ?',type:'textarea',required:true,placeholder:'Produits, services, zone d’activité…'},
+{id:'public',label:'À qui vous adressez-vous ?',required:true,placeholder:'Ex. : dirigeants de PME à Ouagadougou'},
+{id:'ville',label:'Ville et zone d’intervention',placeholder:'Ex. : Ouagadougou, Burkina Faso'},
+{id:'liens',label:'Site actuel et liens de vos réseaux sociaux',type:'textarea',placeholder:'Collez les liens, si vous en avez.'}
+];
+export const finalFields=[
+{id:'budget',label:'Budget prévu pour cette prestation',required:true,placeholder:'Un montant, une fourchette ou « à définir »'},
+{id:'date',label:'Date de livraison souhaitée',type:'date'},
+{id:'imperatif',label:'Cette date est-elle impérative ?',type:'select',options:['Flexible','Impérative : événement ou lancement','À définir ensemble']},
+{id:'fichiers',label:'Liens vers vos fichiers (logo, photos, textes, vidéos…)',type:'textarea',placeholder:'Liens Drive, Dropbox, WeTransfer ou autre dossier accessible. Évitez les documents confidentiels.'},
+{id:'manquants',label:'Quels éléments ne sont pas encore prêts ?',type:'textarea',placeholder:'Vous pourrez joindre les fichiers directement à la conversation WhatsApp ou à votre e-mail.'},
+{id:'validateur',label:'Qui validera le travail et regroupera les retours ?',placeholder:'Nom ou fonction de l’interlocuteur'},
+{id:'precisions',label:'Autres précisions, contraintes ou choses à éviter',type:'textarea'}
+];
+export const briefs={
+site:{name:'Site web',short:'Un site qui répond à votre activité.',time:'8 à 12 minutes',intro:'Pages, fonctionnalités, contenus, domaine et objectifs : précisez l’essentiel pour préparer un devis utile.',fields:[
+{id:'objectif',label:'Quel est l’objectif principal du site ?',type:'select',required:true,options:['Recevoir des demandes de devis','Présenter l’entreprise et rassurer','Vendre des produits','Recevoir des inscriptions','Présenter un catalogue','Autre — à préciser dans les détails']},
+{id:'type',label:'Quel type de site souhaitez-vous ?',type:'select',required:true,options:['Une page de présentation','Site vitrine de plusieurs pages','Catalogue sans paiement en ligne','Boutique avec panier','Refonte d’un site existant','Je souhaite être conseillé']},
+{id:'formule',label:'Une formule vous intéresse-t-elle ?',type:'select',options:['À définir ensemble','Pack Vitrine Essentiel — 119 000 FCFA','Pack Vitrine Pro + Admin — 250 000 à 450 000 FCFA','Option Espace Membre — dès +200 000 FCFA','Boutique ou sur mesure — sur devis','Budget inférieur à 100 000 FCFA']},
+{id:'pages',label:'Quelles pages souhaitez-vous ?',type:'checks',options:['Accueil','À propos','Services','Réalisations','Tarifs','Catalogue / boutique','Formations','Blog / conseils','FAQ','Contact']},
+{id:'details',label:'Décrivez les services ou produits à présenter',required:true,type:'textarea',placeholder:'Liste des prestations, catégories et informations importantes.'},
+{id:'fonctions',label:'Quelles fonctionnalités vous seraient utiles ?',type:'checks',options:['WhatsApp','Formulaire de devis','Carte / itinéraire','Galerie photos','Téléchargement de documents','Prise de rendez-vous','Inscription','Paiement en ligne','Newsletter','Espace privé','Gestion autonome des contenus']},
+{id:'catalogue',label:'Si catalogue ou boutique : combien de produits, quelles variantes et quel mode de livraison ?',type:'textarea',placeholder:'Indiquez aussi les moyens de paiement souhaités. Faisabilité à confirmer.'},
+{id:'langues',label:'Langues du site',placeholder:'Ex. : français ; français et anglais'},
+{id:'contenus',label:'Vos textes et photos sont-ils prêts ?',type:'select',options:['Oui, tout est prêt','Une partie seulement','Non, j’ai besoin de rédaction / visuels','À vérifier']},
+{id:'domaine',label:'Avez-vous déjà un nom de domaine ?',placeholder:'Indiquez le domaine ou vos idées de nom. Ne transmettez aucun mot de passe.'},
+{id:'hebergement',label:'Avez-vous un hébergement ou une plateforme actuelle ?',placeholder:'Nom du fournisseur, si connu. Aucun accès confidentiel.'},
+{id:'emails',label:'Souhaitez-vous des adresses e-mail professionnelles ?',placeholder:'Ex. : contact@votredomaine — 2 boîtes'},
+{id:'coordonnees',label:'Coordonnées à afficher publiquement',type:'textarea',placeholder:'Téléphone, e-mail, adresse professionnelle, horaires. Uniquement les informations à publier.'},
+{id:'design',label:'Couleurs, style et sites dont vous aimez l’approche',type:'textarea',placeholder:'Collez 1 à 3 liens et expliquez ce qui vous plaît, sans demander une copie.'},
+{id:'suivi',label:'Qui mettra les contenus à jour ?',type:'select',options:['Moi / mon équipe','WEB AFRICA, avec une offre de suivi','À définir ensemble']}
+]},
+affiche:{name:'Affiche & flyer',short:'Votre message, lisible au premier regard.',time:'5 à 8 minutes',intro:'Message exact, format, supports et éléments visuels : réunissons ce qu’il faut pour concevoir votre affiche.',fields:[
+{id:'type',label:'Que souhaitez-vous créer ?',required:true,type:'select',options:['Affiche publicitaire','Flyer','Affiche événementielle','Visuel pour réseaux sociaux','Bannière','Autre — à préciser']},
+{id:'objectif',label:'Que doit faire la personne qui voit l’affiche ?',required:true,placeholder:'Acheter, s’inscrire, appeler, venir à un événement…'},
+{id:'titre',label:'Titre ou message principal à afficher',required:true,placeholder:'Écrivez le texte exact ou indiquez « proposition souhaitée ».'},
+{id:'texte',label:'Texte complet et informations obligatoires',type:'textarea',required:true,placeholder:'Nom du produit / événement, bénéfices, prix, promotion, conditions…'},
+{id:'evenement',label:'Si événement : date, heure, lieu et conditions d’accès',type:'textarea'},
+{id:'contact',label:'Coordonnées et appel à l’action à afficher',type:'textarea',required:true,placeholder:'Ex. : Réservez au… / Commandez sur WhatsApp…'},
+{id:'diffusion',label:'Où sera diffusée l’affiche ?',type:'checks',options:['Facebook','Instagram','Statut WhatsApp','Impression','Écran / projection','Autre']},
+{id:'format',label:'Dimensions et orientation souhaitées',placeholder:'Ex. : A4 portrait, 1080 × 1350 px, 2 × 1 m ou « à conseiller »'},
+{id:'declinaisons',label:'Combien de versions et de formats ?',placeholder:'Ex. : 1 concept décliné en publication et story'},
+{id:'style',label:'Style, couleurs et éléments à respecter',type:'textarea',placeholder:'Sobre, festif, institutionnel… Couleurs de votre marque.'},
+{id:'references',label:'Liens d’exemples et ce qui vous plaît',type:'textarea'},
+{id:'images',label:'Quelles images doivent apparaître ?',type:'textarea',placeholder:'Produits, intervenants, logo des partenaires. Indiquez les éléments fournis ou à créer.'},
+{id:'impression',label:'Si impression : imprimeur, quantité et consignes techniques',type:'textarea',placeholder:'Format final, fond perdu ou modèle fourni par l’imprimeur, si connus. Impression à chiffrer séparément.'},
+{id:'livrables',label:'Formats de livraison souhaités',type:'checks',options:['PNG / JPG pour le web','PDF pour impression','Fichier source modifiable — à chiffrer','Je souhaite être conseillé']}
+]},
+video:{name:'Vidéo publicitaire IA',short:'Une publicité conçue autour de votre message.',time:'8 à 12 minutes',intro:'Offre, scénario, voix, formats et références : un brief précis pour une vidéo cohérente avec votre marque.',fields:[
+{id:'produit',label:'Quel produit, service ou événement faut-il promouvoir ?',required:true,type:'textarea'},
+{id:'objectif',label:'Objectif de la vidéo',required:true,type:'select',options:['Recevoir des messages WhatsApp','Faire connaître la marque','Vendre une offre','Annoncer un événement','Expliquer un service','Autre — à préciser']},
+{id:'promesse',label:'Message principal et bénéfice concret',required:true,type:'textarea',placeholder:'Que doit retenir le spectateur ? Indiquez uniquement des promesses que vous pouvez justifier.'},
+{id:'offre',label:'Prix, promotion, dates et conditions à mentionner',type:'textarea'},
+{id:'cta',label:'Action et coordonnées à afficher à la fin',required:true,placeholder:'Ex. : Écrivez au +226… pour réserver'},
+{id:'duree',label:'Durée souhaitée',required:true,type:'select',options:['15 secondes','30 secondes','45 secondes','60 secondes','Autre / à conseiller']},
+{id:'supports',label:'Supports de diffusion',type:'checks',options:['Facebook / Instagram Ads','Reels / TikTok','Statut WhatsApp','YouTube','Écran / événement','Autre']},
+{id:'format',label:'Format de l’image',type:'select',options:['Vertical 9:16','Carré 1:1','Horizontal 16:9','Plusieurs déclinaisons — à préciser','À conseiller']},
+{id:'style',label:'Univers visuel souhaité',type:'select',options:['Réaliste','Animation / illustration','Présentation produit','Texte animé et images','Institutionnel','À proposer']},
+{id:'scenario',label:'Scénario ou enchaînement des scènes',type:'textarea',placeholder:'Décrivez votre idée ou écrivez « scénario à proposer ».'},
+{id:'voix',label:'Voix off souhaitée',type:'select',options:['Sans voix off','Voix féminine synthétique','Voix masculine synthétique','Voix fournie par le client','À conseiller']},
+{id:'langue',label:'Langue, accent et ton',required:true,placeholder:'Ex. : français, ton chaleureux. Disponibilité des langues à confirmer.'},
+{id:'sous-titres',label:'Sous-titres souhaités',type:'select',options:['Oui, intégrés à la vidéo','Oui, fichier séparé','Non','À conseiller']},
+{id:'musique',label:'Ambiance musicale et sonore',placeholder:'Ex. : dynamique, douce, sans musique. Musique fournie uniquement si vous avez les droits.'},
+{id:'assets',label:'Éléments réels à intégrer impérativement',type:'textarea',placeholder:'Logo, emballage exact, photos produit, locaux… Les visuels IA peuvent varier ; fournissez les références indispensables.'},
+{id:'personnes',label:'Personnages ou personnes à représenter',type:'textarea',placeholder:'Personnages fictifs, silhouettes, aucune personne… Une personne réelle ou sa voix nécessite son autorisation.'},
+{id:'references',label:'Liens de vidéos de référence et ce qui vous plaît',type:'textarea'},
+{id:'versions',label:'Nombre de vidéos et déclinaisons souhaitées',placeholder:'Ex. : 1 vidéo de 30 s + une version courte de 15 s'},
+{id:'contraintes',label:'Mots, scènes ou éléments à éviter',type:'textarea'}
+]},
+logo:{name:'Logo & identité',short:'Une marque reconnaissable et cohérente.',time:'6 à 10 minutes',intro:'Nom exact, personnalité, inspirations et usages : posons les bases de votre identité visuelle.',fields:[
+{id:'nom-marque',label:'Nom exact à faire apparaître sur le logo',required:true,placeholder:'Respectez l’orthographe et les majuscules souhaitées.'},
+{id:'slogan',label:'Slogan éventuel et doit-il apparaître ?',placeholder:'Slogan exact ou « aucun »'},
+{id:'creation',label:'Création ou refonte ?',required:true,type:'select',options:['Nouveau logo','Modernisation du logo existant','Refonte complète','Logo + kit identité visuelle']},
+{id:'histoire',label:'Histoire, sens du nom et différence de votre marque',type:'textarea',required:true},
+{id:'valeurs',label:'Trois mots qui doivent décrire votre marque',required:true,placeholder:'Ex. : fiable, accessible, innovante'},
+{id:'style',label:'Style de logo envisagé',type:'select',options:['Nom de marque typographique','Symbole + nom','Monogramme / initiales','Emblème','À proposer']},
+{id:'couleurs',label:'Couleurs souhaitées et couleurs à éviter',type:'textarea'},
+{id:'symboles',label:'Symboles, formes ou idées à explorer',type:'textarea',placeholder:'Précisez également les symboles à éviter.'},
+{id:'references',label:'Logos de référence et ce qui vous plaît',type:'textarea',placeholder:'Liens vers 1 à 3 références ; les créations resteront originales.'},
+{id:'concurrents',label:'Concurrents ou marques dont il faut se distinguer',type:'textarea'},
+{id:'usages',label:'Où utiliserez-vous le logo ?',type:'checks',options:['Site et réseaux sociaux','Cartes de visite / documents','Enseigne','Vêtements / broderie','Emballages','Véhicule','Autre']},
+{id:'existant',label:'Éléments de l’identité actuelle à conserver',type:'textarea',placeholder:'Couleurs, symbole, forme… ou « aucun »'},
+{id:'pack',label:'Livrables souhaités',type:'checks',options:['Logo couleur','Version noir et blanc','Fond transparent','Fichiers vectoriels','Mini-charte couleurs et polices','Carte de visite','Visuels réseaux sociaux']},
+{id:'contraintes',label:'Contraintes particulières',type:'textarea',placeholder:'Lisibilité en petite taille, une couleur pour l’impression, déclinaison bilingue…'}
+]}
+};

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon BTP & Génie Civil — Plateforme Corporate BTP au Burkina Faso</title>
+  <meta name="description" content="Leader en construction de bâtiments modernes, génie civil, voiries (VRD) et grands travaux au Burkina Faso. 15 ans d'excellence technique de Ouagadougou à Bobo-Dioulasso.">
+  <link rel="stylesheet" href="/fonts.css">
+  <script src="/demos/tailwind.js"></script>
+  <script>
+    if (typeof tailwind !== 'undefined') {
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              horizon: {
+                950: '#060d1f',
+                900: '#0b1633',
+                800: '#13234d',
+                700: '#1b326b',
+                600: '#25448f',
+                500: '#345cb8',
+              },
+              btp: {
+                orange: '#ea580c',
+                amber: '#f59e0b',
+                gold: '#d97706',
+              },
+              concrete: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                800: '#1e293b',
+                900: '#0f172a',
+              }
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              display: ['"Space Grotesk"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-navy {
+      background: rgba(11, 22, 51, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .grid-pattern {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-concrete-900 text-slate-100 font-sans antialiased selection:bg-btp-amber selection:text-horizon-950">
+
+  <!-- Bandeau Démo WEB AFRICA -->
+  <style>
+    .wa-demo-bar-btp{background:#060d1f;color:#ffffff;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.15);position:sticky;top:0;z-index:99999;font-family:sans-serif;flex-wrap:wrap;gap:8px;}
+    @media(max-width:640px){.wa-demo-bar-btp{flex-direction:column;align-items:stretch;text-align:center;padding:8px 12px;}.wa-demo-bar-btp>div{justify-content:center!important;}}
+  </style>
+  <div class="wa-demo-bar-btp">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <span style="background:#f59e0b;color:#060d1f;font-weight:700;padding:2px 8px;border-radius:9999px;font-size:10px;letter-spacing:0.05em;text-transform:uppercase;">MODÈLE BTP &amp; GÉNIE CIVIL</span>
+      <span style="color:#cbd5e1;font-size:12px;">Conçu par WEB AFRICA · En 3 à 7 jours</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <a href="https://wa.me/22669291337?text=Bonjour%20Abdoul%20Salam%2C%20je%20regarde%20la%20d%C3%A9mo%20Horizon%20BTP%20et%20je%20souhaite%20un%20devis%20similaire%20pour%20mon%20entreprise." target="_blank" rel="noopener" style="background:#10b981;color:#ffffff;font-weight:600;padding:5px 14px;border-radius:9999px;text-decoration:none;font-size:12px;display:inline-flex;align-items:center;gap:4px;">Commander sur WhatsApp ↗</a>
+      <a href="/demonstrations/" style="color:#94a3b8;text-decoration:none;font-size:12px;">← Retour</a>
+    </div>
+  </div>
+
+
+
+  <!-- Top Bar Informations Chantiers & Contacts -->
+  <aside class="bg-horizon-950 border-b border-white/10 text-xs text-slate-300 py-2.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-semibold text-white">Agrément BTP Catégorie A</span>
+        <span class="text-slate-500">|</span>
+        <span class="hidden md:inline">Bureau Veritas & SOCOTEC conformes</span>
+        <span class="text-slate-500 hidden md:inline">|</span>
+        <span class="hidden lg:inline">📍 Ouaga 2000, Boulevard Muammar Kadhafi</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="tel:+22665414899" class="hover:text-btp-amber transition flex items-center gap-1">
+          <span>📞</span> +226 65 41 48 99
+        </a>
+        <a href="https://wa.me/22669291337?text=Bonjour%20Horizon%20BTP%2C%20je%20souhaite%20une%20%C3%A9tude%20pour%20un%20projet%20de%20construction." target="_blank" class="bg-btp-amber hover:bg-btp-gold text-horizon-950 font-bold px-3 py-1 rounded-md transition shadow flex items-center gap-1">
+          <span>Direction Travaux (WhatsApp) ↗</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- En-tête Navigation -->
+  <header class="sticky top-0 z-50 glass-navy border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#accueil" class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-btp-amber to-btp-orange flex items-center justify-center text-horizon-950 font-extrabold text-2xl shadow-lg shadow-btp-amber/20 border border-white/20">
+            H
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-bold text-2xl tracking-wider text-white">HORIZON</span>
+              <span class="bg-btp-amber text-horizon-950 font-extrabold text-[11px] px-1.5 py-0.5 rounded tracking-widest">BTP</span>
+            </div>
+            <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Construction & Génie Civil · Burkina Faso</span>
+          </div>
+        </a>
+
+        <!-- Liens Bureau -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+          <a href="#accueil" class="hover:text-btp-amber transition">Accueil</a>
+          <a href="#expertises" class="hover:text-btp-amber transition">Nos Pôles</a>
+          <a href="#realisations" class="hover:text-btp-amber transition">Chantiers & Références</a>
+          <a href="#parc" class="hover:text-btp-amber transition">Moyens Matériels</a>
+          <a href="#qhse" class="hover:text-btp-amber transition">Démarche QHSE</a>
+          <a href="#contact" class="hover:text-btp-amber transition">Contact</a>
+        </nav>
+
+        <!-- CTA Devis -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#devis" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-btp-amber to-btp-orange hover:from-amber-400 hover:to-orange-500 text-horizon-950 font-bold text-sm shadow-lg shadow-btp-amber/25 transition transform hover:-translate-y-0.5">
+            Étude de projet / Devis ↗
+          </a>
+        </div>
+
+        <!-- Menu Mobile Button -->
+        <button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg bg-horizon-800 border border-white/10" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+      <!-- Menu déroulant Mobile -->
+      <div id="mobileMenu" class="hidden lg:hidden py-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="#accueil" class="text-white py-2 hover:text-btp-amber transition">Accueil</a>
+        <a href="#expertises" class="text-slate-300 py-2 hover:text-btp-amber transition">Nos Pôles d'Expertise</a>
+        <a href="#realisations" class="text-slate-300 py-2 hover:text-btp-amber transition">Chantiers & Références</a>
+        <a href="#parc" class="text-slate-300 py-2 hover:text-btp-amber transition">Moyens & Engins</a>
+        <a href="#qhse" class="text-slate-300 py-2 hover:text-btp-amber transition">Démarche QHSE</a>
+        <a href="#devis" class="w-full text-center py-3 rounded-lg bg-btp-amber text-horizon-950 font-bold mt-2">Demander un Devis de Chantier</a>
+        <a href="https://wa.me/22669291337?text=Bonjour%20Horizon%20BTP%2C%20je%20souhaite%20un%20rendez-vous%20technique." target="_blank" class="w-full text-center py-3 rounded-lg border border-btp-amber text-btp-amber font-semibold">WhatsApp Travaux ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <!-- Hero Section Corporate BTP -->
+    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden py-16 lg:py-24 grid-pattern">
+      <!-- Image de fond avec filtre immersif sombre -->
+      <div class="absolute inset-0 z-0">
+        <img src="/photos/btp-hero.jpg" alt="Chantier de construction BTP au Burkina Faso" class="w-full h-full object-cover opacity-25">
+        <div class="absolute inset-0 bg-gradient-to-t from-concrete-900 via-horizon-950/85 to-horizon-950/70"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18)_0,transparent_60%)]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <!-- Chapeau Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-horizon-800/80 border border-btp-amber/40 text-btp-amber text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
+          <span>🏗️</span> INGÉNIERIE, BÂTIMENT &amp; GRANDS TRAVAUX AU SAHEL
+        </div>
+
+        <!-- Titre principal -->
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-5xl leading-[1.12] mb-6">
+          Bâtir des infrastructures solides.<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-btp-amber via-amber-300 to-btp-orange">Concrétiser vos chantiers majeurs.</span>
+        </h1>
+
+        <!-- Sous-titre -->
+        <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed mb-10 font-normal">
+          Depuis plus de 15 ans au Burkina Faso, <strong>Horizon BTP</strong> réalise des immeubles tertiaires, résidences contemporaines, plateformes logistiques et voiries avec une rigueur technique et un respect strict des délais.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <a href="#devis" class="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-btp-amber to-btp-orange hover:from-amber-400 hover:to-orange-500 text-horizon-950 font-extrabold text-base shadow-xl shadow-btp-amber/25 transition transform hover:scale-105 flex items-center justify-center gap-2">
+            <span>📋</span> Demander une étude technique
+          </a>
+          <a href="#realisations" class="w-full sm:w-auto px-8 py-4 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-base backdrop-blur-md transition flex items-center justify-center gap-2">
+            <span>🏢</span> Consulter nos réalisations
+          </a>
+          <a href="https://wa.me/22669291337?text=Bonjour%20Horizon%20BTP%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20appel%20d%27offres%20ou%20chantier." target="_blank" class="w-full sm:w-auto px-6 py-4 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition">
+            <span>WhatsApp Chantier</span> ↗
+          </a>
+        </div>
+
+        <!-- Chiffres clés de réassurance -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 w-full max-w-5xl text-left">
+          <div class="bg-white/5 border border-white/10 p-5 rounded-xl backdrop-blur-sm">
+            <span class="font-display font-bold text-3xl sm:text-4xl text-btp-amber">+120</span>
+            <strong class="block text-white text-sm mt-1">Chantiers Livrés</strong>
+            <span class="text-xs text-slate-400">Ouaga, Bobo et corridors</span>
+          </div>
+          <div class="bg-white/5 border border-white/10 p-5 rounded-xl backdrop-blur-sm">
+            <span class="font-display font-bold text-3xl sm:text-4xl text-btp-amber">15 Ans</span>
+            <strong class="block text-white text-sm mt-1">D'Expérience Terrain</strong>
+            <span class="text-xs text-slate-400">Maîtrise du climat sahélien</span>
+          </div>
+          <div class="bg-white/5 border border-white/10 p-5 rounded-xl backdrop-blur-sm">
+            <span class="font-display font-bold text-3xl sm:text-4xl text-btp-amber">35+</span>
+            <strong class="block text-white text-sm mt-1">Engins en Propre</strong>
+            <span class="text-xs text-slate-400">Pelles, centrales, camions</span>
+          </div>
+          <div class="bg-white/5 border border-white/10 p-5 rounded-xl backdrop-blur-sm">
+            <span class="font-display font-bold text-3xl sm:text-4xl text-btp-amber">100%</span>
+            <strong class="block text-white text-sm mt-1">Normes QHSE</strong>
+            <span class="text-xs text-slate-400">Contrôle Bureau Veritas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Pôles d'Expertise -->
+    <section id="expertises" class="py-24 bg-horizon-900 border-t border-white/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 text-btp-amber text-xs font-bold uppercase tracking-widest mb-3">
+              <span>⚡</span> NOS DOMAINES D'INTERVENTION
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Une capacité d'exécution globale pour chaque projet.
+            </h2>
+          </div>
+          <p class="text-slate-300 text-sm sm:text-base max-w-md">
+            Du premier coup de pelle à la remise des clés, nous mobilisons ingénieurs, techniciens et parcs d'engins spécialisés.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Carte 1 -->
+          <article class="bg-horizon-950 border border-white/10 hover:border-btp-amber/60 rounded-2xl p-7 flex flex-col justify-between transition-all transform hover:-translate-y-1.5 shadow-xl group">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-btp-amber/10 border border-btp-amber/30 text-btp-amber font-display font-bold text-2xl flex items-center justify-center mb-6 group-hover:bg-btp-amber group-hover:text-horizon-950 transition">
+                01
+              </div>
+              <h3 class="font-display text-xl font-bold text-white mb-3">
+                Bâtiment &amp; Gros Œuvre
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Construction d'immeubles de bureaux (R+3 à R+8), sièges corporatifs, structures en béton armé banché et charpentes métalliques de grande portée.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                <li class="flex items-center gap-2">✓ Fondations renforcées &amp; micropieux</li>
+                <li class="flex items-center gap-2">✓ Dalles pleines et planchers post-tendus</li>
+                <li class="flex items-center gap-2">✓ Conception bioclimatique sahélienne</li>
+              </ul>
+            </div>
+            <a href="#devis" class="text-btp-amber font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:underline">
+              Étudier un bâtiment ↗
+            </a>
+          </article>
+
+          <!-- Carte 2 -->
+          <article class="bg-horizon-950 border border-white/10 hover:border-btp-amber/60 rounded-2xl p-7 flex flex-col justify-between transition-all transform hover:-translate-y-1.5 shadow-xl group">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-btp-amber/10 border border-btp-amber/30 text-btp-amber font-display font-bold text-2xl flex items-center justify-center mb-6 group-hover:bg-btp-amber group-hover:text-horizon-950 transition">
+                02
+              </div>
+              <h3 class="font-display text-xl font-bold text-white mb-3">
+                Génie Civil &amp; Voiries (VRD)
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Aménagements urbains, routes bitumées, plateformes industrielles, caniveaux d'évacuation pluviale et dalots en béton armé.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                <li class="flex items-center gap-2">✓ Terrassements de grande masse</li>
+                <li class="flex items-center gap-2">✓ Réseaux d'assainissement et buses</li>
+                <li class="flex items-center gap-2">✓ Pavage lourd et bitumage bi-couche</li>
+              </ul>
+            </div>
+            <a href="#devis" class="text-btp-amber font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:underline">
+              Étudier un chantier VRD ↗
+            </a>
+          </article>
+
+          <!-- Carte 3 -->
+          <article class="bg-horizon-950 border border-white/10 hover:border-btp-amber/60 rounded-2xl p-7 flex flex-col justify-between transition-all transform hover:-translate-y-1.5 shadow-xl group">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-btp-amber/10 border border-btp-amber/30 text-btp-amber font-display font-bold text-2xl flex items-center justify-center mb-6 group-hover:bg-btp-amber group-hover:text-horizon-950 transition">
+                03
+              </div>
+              <h3 class="font-display text-xl font-bold text-white mb-3">
+                Villas d'Architecte &amp; Résidences
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Réalisation de résidences privées d'exception à Ouaga 2000. Alliances de béton brut, briques BTC locales et pierre de granit taillée.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                <li class="flex items-center gap-2">✓ Finitions haut standing &amp; marbre</li>
+                <li class="flex items-center gap-2">✓ Patios intérieurs rafraîchissants</li>
+                <li class="flex items-center gap-2">✓ Piscines intégrées &amp; domotique</li>
+              </ul>
+            </div>
+            <a href="#devis" class="text-btp-amber font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:underline">
+              Projet résidentiel ↗
+            </a>
+          </article>
+
+          <!-- Carte 4 -->
+          <article class="bg-horizon-950 border border-white/10 hover:border-btp-amber/60 rounded-2xl p-7 flex flex-col justify-between transition-all transform hover:-translate-y-1.5 shadow-xl group">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-btp-amber/10 border border-btp-amber/30 text-btp-amber font-display font-bold text-2xl flex items-center justify-center mb-6 group-hover:bg-btp-amber group-hover:text-horizon-950 transition">
+                04
+              </div>
+              <h3 class="font-display text-xl font-bold text-white mb-3">
+                Études, Plans &amp; Ingénierie BIM
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Bureau d'études techniques intégré : calculs de structures parasismiques, modélisation 3D, métrés détaillés et ordonnancement de chantier.
+              </p>
+              <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                <li class="flex items-center gap-2">✓ Notes de calculs Eurocodes &amp; BAEL</li>
+                <li class="flex items-center gap-2">✓ Devis estimatifs et quantitatifs (DQE)</li>
+                <li class="flex items-center gap-2">✓ Suivi hebdomadaire par drone</li>
+              </ul>
+            </div>
+            <a href="#devis" class="text-btp-amber font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1 group-hover:underline">
+              Consulter nos ingénieurs ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Chantiers Réalisés (Portfolio) -->
+    <section id="realisations" class="py-24 bg-concrete-900 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-btp-amber text-xs font-bold uppercase tracking-widest mb-3">
+            <span>🏛️</span> PORTFOLIO CHANTIERS
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Des références tangibles sur le territoire.
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4">
+            Chaque ouvrage reflète notre exigence de solidité, notre rigueur de mise en œuvre et notre capacité à maîtriser les coûts des maîtres d'ouvrage.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Projet 1 -->
+          <article class="bg-horizon-950 rounded-2xl overflow-hidden border border-white/10 hover:border-btp-amber/50 transition-all shadow-xl group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/photos/btp-immeuble.jpg" alt="Horizon Corporate Tower Ouaga 2000" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-horizon-950 via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-horizon-900/90 text-btp-amber font-bold text-xs px-3 py-1 rounded-full border border-btp-amber/30">
+                Immeuble R+5 · Bureaux
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-xs text-slate-400 font-semibold">OUAGA 2000 · LIVRÉ EN 2025</span>
+              <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">
+                Horizon Corporate Tower
+              </h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                4 200 m² de plancher, façade ventilée brise-soleil passive, double niveau de parking souterrain et groupe électrogène intégré.
+              </p>
+              <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
+                <span>Délai : <strong>14 mois</strong></span>
+                <span class="text-btp-amber font-bold">100% Livré ✓</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="bg-horizon-950 rounded-2xl overflow-hidden border border-white/10 hover:border-btp-amber/50 transition-all shadow-xl group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/photos/btp-villa.jpg" alt="Villa Contemporaine Patio Ouaga" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-horizon-950 via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-horizon-900/90 text-btp-amber font-bold text-xs px-3 py-1 rounded-full border border-btp-amber/30">
+                Résidentiel de Luxe
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-xs text-slate-400 font-semibold">KAMBOINSIN · LIVRÉ EN 2024</span>
+              <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">
+                Villa Bioclimatique Patio
+              </h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Résidence de 450 m² habitables avec murs en briques compressées BTC, toiture isolante ventilée, patio central et piscine miroir.
+              </p>
+              <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
+                <span>Délai : <strong>7 mois</strong></span>
+                <span class="text-btp-amber font-bold">100% Livré ✓</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="bg-horizon-950 rounded-2xl overflow-hidden border border-white/10 hover:border-btp-amber/50 transition-all shadow-xl group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/photos/btp-vrd.jpg" alt="Plateforme Industrielle Kossodo VRD" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-horizon-950 via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-horizon-900/90 text-btp-amber font-bold text-xs px-3 py-1 rounded-full border border-btp-amber/30">
+                Génie Civil &amp; VRD
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-xs text-slate-400 font-semibold">ZONE INDUSTRIELLE KOSSODO</span>
+              <h3 class="font-display text-xl font-bold text-white mt-1 mb-3">
+                Plateforme Logistique 8 000 m²
+              </h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Terrassement lourd, dallage industriel haute résistance 5T/m², voies de circulation lourde et système d'assainissement anti-inondation.
+              </p>
+              <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
+                <span>Délai : <strong>5 mois</strong></span>
+                <span class="text-btp-amber font-bold">100% Livré ✓</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Parc Matériel & Moyens Techniques -->
+    <section id="parc" class="py-24 bg-horizon-950 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 text-btp-amber text-xs font-bold uppercase tracking-widest mb-3">
+              <span>🚜</span> AUTONOMIE &amp; PUISSANCE LOGISTIQUE
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+              Un parc d'engins lourds en propriété intégrale.
+            </h2>
+            <p class="text-slate-300 text-base leading-relaxed mb-8">
+              Dans le BTP au Burkina Faso, la maîtrise des délais repose sur la disponibilité immédiate du matériel. Horizon BTP détient et entretient sa propre flotte d'engins pour garantir une continuité totale sur vos chantiers.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-horizon-900/60 border border-white/10">
+                <span class="text-2xl">🏗️</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm">Pelles hydrauliques 22T &amp; Bulldozers D6</h3>
+                  <p class="text-slate-400 text-xs mt-1">Capacité de terrassement massif et d'excavation rocheuse rapide.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-horizon-900/60 border border-white/10">
+                <span class="text-2xl">🚛</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm">Centrales à béton mobiles &amp; Camions toupies</h3>
+                  <p class="text-slate-400 text-xs mt-1">Béton prêt à l'emploi formulé sur site selon les normes NF EN 206.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-horizon-900/60 border border-white/10">
+                <span class="text-2xl">📐</span>
+                <div>
+                  <h3 class="font-bold text-white text-sm">Laboratoire de contrôle géotechnique &amp; Drones</h3>
+                  <p class="text-slate-400 text-xs mt-1">Essais de compactage Proctor, scléromètre et cartographie 3D aérienne.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img src="/photos/btp-engins.jpg" alt="Flotte d'engins de chantier Horizon BTP" class="w-full h-[480px] object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-horizon-950 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-horizon-950/90 border border-btp-amber/30 backdrop-blur-md">
+                <span class="text-btp-amber font-display font-bold text-xl block">+35 Unités Opérationnelles</span>
+                <p class="text-slate-300 text-xs mt-1">Base technique principale et atelier mécanique situés sur l'axe Ouaga–Koudougou.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section QHSE (Qualité, Hygiène, Sécurité, Environnement) -->
+    <section id="qhse" class="py-24 bg-horizon-900 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-btp-amber text-xs font-bold uppercase tracking-widest mb-3">
+            <span>🛡️</span> SÉCURITÉ &amp; ENGAGEMENTS
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            La rigueur QHSE comme standard absolu.
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4">
+            Construire durablement, c'est protéger les hommes sur les chantiers et respecter l'écosystème sahélien.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-horizon-950 border border-white/10">
+            <span class="text-4xl mb-4 block">🦺</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Zéro Accident sur Site</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Port des EPI strict, causeries sécurité matinales obligatoires, balisage rigoureux des zones de levage et formation continue de nos compagnons.
+            </p>
+          </div>
+          <div class="p-8 rounded-2xl bg-horizon-950 border border-white/10">
+            <span class="text-4xl mb-4 block">🌿</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Construction Sahélienne Responsable</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Valorisation des matériaux locaux (BTC, latérite, granites du Burkina), réduction de l'empreinte carbone et gestion raisonnée des déchets de chantier.
+            </p>
+          </div>
+          <div class="p-8 rounded-2xl bg-horizon-950 border border-white/10">
+            <span class="text-4xl mb-4 block">📊</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Transparence Budgétaire</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Bordereaux de prix unitaires (BPU) détaillés, décomptes mensuels certifiés et plannings Gantt consultables en temps réel par les maîtres d'ouvrage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Formulaire Devis / Simulateur de Chantier -->
+    <section id="devis" class="py-24 bg-concrete-900 border-t border-white/10 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-horizon-950 border border-btp-amber/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-btp-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="text-center mb-10">
+            <span class="bg-btp-amber text-horizon-950 font-extrabold text-[11px] px-3 py-1 rounded-full uppercase tracking-widest inline-block mb-3">
+              SIMULATION DE PROJET EXPRESS
+            </span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+              Demandez votre étude technique &amp; cotation
+            </h2>
+            <p class="text-slate-400 text-sm mt-2">
+              Remplissez les détails de votre projet. Notre bureau technique vous recontacte sous 24h avec une estimation chiffrée.
+            </p>
+          </div>
+
+          <form id="btpDevisForm" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Votre Nom &amp; Prénom *</label>
+                <input type="text" id="btpNom" required placeholder="Ex. : Ousmane Sawadogo" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-btp-amber">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Téléphone / WhatsApp *</label>
+                <input type="tel" id="btpTel" required placeholder="+226 70 00 00 00" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-btp-amber">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Nature du Projet *</label>
+                <select id="btpType" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white text-sm focus:outline-none focus:border-btp-amber">
+                  <option value="Immeuble tertiaire / Bureaux">Immeuble tertiaire / Bureaux (R+2 à R+8)</option>
+                  <option value="Villa contemporaine haut standing">Villa contemporaine haut standing</option>
+                  <option value="Plateforme industrielle / Hangar">Plateforme industrielle / Entrepôt</option>
+                  <option value="Voirie, Pavage & Assainissement VRD">Voirie, Pavage & Assainissement VRD</option>
+                  <option value="Rénovation & Réhabilitation lourde">Rénovation & Réhabilitation lourde</option>
+                  <option value="Études architecturales & calculs de structures">Études architecturales & calculs de structures</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Localisation du Chantier *</label>
+                <select id="btpLieu" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white text-sm focus:outline-none focus:border-btp-amber">
+                  <option value="Ouagadougou (Ouaga 2000, Kamboinsin, Ville)">Ouagadougou (Ouaga 2000, Kamboinsin, Ville)</option>
+                  <option value="Bobo-Dioulasso & Hauts-Bassins">Bobo-Dioulasso & Hauts-Bassins</option>
+                  <option value="Koudougou & Région Centre-Ouest">Koudougou & Région Centre-Ouest</option>
+                  <option value="Autre région / Province du Burkina Faso">Autre région / Province du Burkina Faso</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Surface estimée (m²)</label>
+                <input type="text" id="btpSurface" placeholder="Ex. : 450 m² ou 2 km VRD" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-btp-amber">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Délai de démarrage souhaité</label>
+                <select id="btpDelai" class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white text-sm focus:outline-none focus:border-btp-amber">
+                  <option value="Immédiat (sous 1 mois)">Immédiat (sous 1 mois)</option>
+                  <option value="Dans 1 à 3 mois">Dans 1 à 3 mois</option>
+                  <option value="Étude préalable / Appel d'offres en cours">Étude préalable / Appel d'offres en cours</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Précisions sur votre besoin</label>
+              <textarea id="btpDetails" rows="4" placeholder="Plans disponibles, contraintes du terrain, budget indicatif ou questions techniques..." class="w-full px-4 py-3 rounded-lg bg-horizon-900 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-btp-amber"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-btp-amber via-amber-400 to-btp-orange text-horizon-950 font-extrabold text-base shadow-xl shadow-btp-amber/30 hover:scale-[1.01] transition transform flex items-center justify-center gap-2">
+              <span>🚀</span> Valider &amp; Transmettre ma demande sur WhatsApp
+            </button>
+            <p class="text-center text-[11px] text-slate-400">
+              🔒 Vos données techniques restent strictement confidentielles. Aucun spam.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact & Coordonnées -->
+    <section id="contact" class="py-20 bg-horizon-950 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-2xl bg-horizon-900/60 border border-white/10">
+            <span class="text-2xl mb-3 block">🏢</span>
+            <strong class="text-white block font-display text-lg mb-1">Siège Social &amp; Direction</strong>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Boulevard Muammar Kadhafi, Immeuble Horizon, Ouaga 2000, Ouagadougou, Burkina Faso.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-horizon-900/60 border border-white/10">
+            <span class="text-2xl mb-3 block">📞</span>
+            <strong class="text-white block font-display text-lg mb-1">Lignes Directes Travaux</strong>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Standard : +226 65 41 48 99<br>
+              WhatsApp Pro : +226 69 29 13 37<br>
+              Email : contact@horizon-btp.bf
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-horizon-900/60 border border-white/10">
+            <span class="text-2xl mb-3 block">⏱️</span>
+            <strong class="text-white block font-display text-lg mb-1">Horaires &amp; Permanence</strong>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Bureaux : Lun – Ven : 07h30 – 17h30<br>
+              Samedi : 08h00 – 13h00<br>
+              Astreinte Chantiers : 24h/24 &amp; 7j/7
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Corporate -->
+  <footer class="bg-horizon-950 border-t border-white/10 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded bg-btp-amber flex items-center justify-center text-horizon-950 font-bold text-sm">H</div>
+        <span class="text-white font-display font-bold text-base">HORIZON BTP &amp; GÉNIE CIVIL</span>
+        <span class="text-slate-600">|</span>
+        <span>Burkina Faso</span>
+      </div>
+      <div>
+        <span>© 2026 Horizon BTP. Modèle de démonstration sectoriel réalisé par <a href="/" class="text-btp-amber font-semibold hover:underline">WEB AFRICA</a>.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/22669291337?text=Bonjour%20Horizon%20BTP%2C%20je%20souhaite%20un%20devis%20de%20construction." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-full shadow-2xl transition transform hover:scale-105" aria-label="WhatsApp Chantier">
+    <span class="text-xl">💬</span>
+    <span class="text-xs">WhatsApp Chantier</span>
+  </a>
+
+  <!-- Script interactif de réservation / devis & menu mobile -->
+  <script>
+    // Menu mobile toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Gestion du formulaire de devis vers WhatsApp
+    const devisForm = document.getElementById('btpDevisForm');
+    if (devisForm) {
+      devisForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nom = document.getElementById('btpNom').value.trim();
+        const tel = document.getElementById('btpTel').value.trim();
+        const type = document.getElementById('btpType').value;
+        const lieu = document.getElementById('btpLieu').value;
+        const surface = document.getElementById('btpSurface').value.trim() || 'Non précisée';
+        const delai = document.getElementById('btpDelai').value;
+        const details = document.getElementById('btpDetails').value.trim() || 'Aucune précision complémentaire';
+
+        const message = `*DEMANDE DE DEVIS — HORIZON BTP BURKINA*\n\n` +
+          `👤 *Client :* ${nom}\n` +
+          `📞 *Contact :* ${tel}\n` +
+          `🏗️ *Projet :* ${type}\n` +
+          `📍 *Localisation :* ${lieu}\n` +
+          `📐 *Surface estimée :* ${surface}\n` +
+          `⏱️ *Échéance :* ${delai}\n` +
+          `📝 *Détails :* ${details}\n\n` +
+          `_Demande transmise via la plateforme corporate Horizon BTP._`;
+
+        const waUrl = 'https://wa.me/22669291337?text=' + encodeURIComponent(message);
+        window.open(waUrl, '_blank');
+      });
+    }
+  </script>
+</body>
+</html>
