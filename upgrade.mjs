@@ -4,19 +4,19 @@ export function upgrade(pages, { add, head, section, cta, prices, faq, steps, li
   const photo = (id, alt, eager = false) => `<img src="/photos/${id}.jpg" alt="${alt}" width="1280" height="${id === 'formation' ? 720 : id === 'ouaga' ? 525 : 853}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
   const caption = t => `<figcaption>${t} · <a href="/credits/">Crédits ↗</a></figcaption>`;
 
-  const art = t => t === 'btp'
-    ? `<div class="demo-art demo-art-photo"><picture><source srcset="/photos/demo-btp-cover.webp" type="image/webp"><img src="/photos/demo-btp-cover.jpg" alt="Horizon BTP — Plateforme Construction &amp; Génie Civil" class="demo-cover-img" width="720" height="520" loading="lazy" decoding="async"></picture><div class="demo-art-overlay"><small>HORIZON BTP / CORPORATE PLATFORM</small><strong>Bâtir l’avenir.<br>Avec solidité.</strong><span>BÂTIMENT / GÉNIE CIVIL / VRD</span></div></div>`
-    : t === 'cabinet'
-    ? `<div class="demo-art demo-art-photo"><picture><source srcset="/photos/demo-cabinet-cover.webp" type="image/webp"><img src="/photos/demo-cabinet-cover.jpg" alt="Cap Conseil — Modèle Cabinet &amp; Conseil" class="demo-cover-img" width="720" height="520" loading="lazy" decoding="async"></picture><div class="demo-art-overlay"><small>CAP CONSEIL / CONCEPT CABINET</small><strong>Un cap clair.<br>Des décisions utiles.</strong><span>COMPRENDRE → STRUCTURER → AVANCER</span></div></div>`
+  const art = t => t === 'zenith'
+    ? `<div class="demo-art demo-art-photo"><picture><source srcset="/photos/demo-zenith-cover.webp" type="image/webp"><img src="/photos/demo-zenith-cover.jpg" alt="ZENITH VISION — Agence de Communication Visuelle &amp; Supports Événementiels" class="demo-cover-img" width="720" height="520" loading="lazy" decoding="async"></picture><div class="demo-art-overlay"><small>ZENITH VISION / COMMUNICATION VISUELLE</small><strong>Faites connaître votre marque.<br>En 3 secondes.</strong><span>KAKÉMONOS / BANNIÈRES / LOGOS / VIDÉOS IA</span></div></div>`
+    : t === 'zgl'
+    ? `<div class="demo-art demo-art-photo"><picture><source srcset="/photos/demo-zgl-cover.webp" type="image/webp"><img src="/photos/demo-zgl-cover.jpg" alt="ZIDOMA GLOBAL LOGISTICS — Fournitures, Travaux &amp; Maintenance" class="demo-cover-img" width="720" height="520" loading="lazy" decoding="async"></picture><div class="demo-art-overlay"><small>ZIDOMA GLOBAL LOGISTICS / MULTISERVICES</small><strong>Vos équipements.<br>Vos travaux. Nos solutions.</strong><span>FOURNITURES / MAINTENANCE / ÉNERGIE / LOCATION</span></div></div>`
     : `<div class="demo-art demo-art-photo"><picture><source srcset="/photos/demo-restaurant-cover.webp" type="image/webp"><img src="/photos/demo-restaurant-cover.jpg" alt="Savana — Modèle Restaurant &amp; Gastronomie" class="demo-cover-img" width="720" height="520" loading="lazy" decoding="async"></picture><div class="demo-art-overlay"><small>SAVANA / CONCEPT RESTAURANT</small><strong>L’art culinaire d’Afrique.<br>Au cœur de Ouaga.</strong><span>GRILLADES / CUISINE SAHÉLIENNE / LOUNGE</span></div></div>`;
 
   const demos = [
-    ['btp', 'Horizon BTP', 'Construction & Génie Civil', 'Une plateforme corporate pour valoriser les chantiers d’envergure, le parc d’engins lourds et les appels d’offres.'],
-    ['cabinet', 'Cap Conseil', 'Conseil & expertise', 'Une identité expressive pour rendre les missions et la méthode faciles à comprendre.'],
-    ['restaurant', 'Savana', 'Restaurant & Gastronomie', 'Une vitrine gourmande pour mettre en valeur les spécialités sahéliennes, la carte et booster les réservations WhatsApp.']
+    ['zenith', 'ZENITH VISION', 'Communication Visuelle & Événementiel', 'Supports grand format (kakémonos grande base 85x200, roll-up dos gris occultant), identités de marque et vidéos publicitaires IA en 48H chrono.', 'https://zenith-vision.vercel.app', true],
+    ['zgl', 'ZIDOMA GLOBAL LOGISTICS', 'Multiservices & Logistique B2B', 'Fournitures professionnelles certifiées, maintenance industrielle, travaux électriques & climatisation et location de véhicules & engins.', 'https://zidoma-global-logistics.vercel.app', true],
+    ['restaurant', 'Savana', 'Restaurant & Gastronomie', 'Une vitrine gourmande pour mettre en valeur les spécialités sahéliennes, la carte et booster les réservations WhatsApp.', '/demos/restaurant/', false]
   ];
 
-  const gallery = () => `<div class="demo-grid">${demos.map(([s, t, c, d]) => `<article class="demo-card" data-category="${s}" data-tilt><a href="/demos/${s}/" aria-label="Découvrir la démonstration ${t}">${art(s)}</a><div class="demo-caption"><span class="tag">${c} · Démonstration</span><h3><a href="/demos/${s}/">${t} ↗</a></h3><p>${d}</p></div></article>`).join('')}</div>`;
+  const gallery = () => `<div class="demo-grid">${demos.map(([s, t, c, d, linkUrl, isExt]) => `<article class="demo-card" data-category="${s}" data-tilt><a href="${linkUrl}" ${isExt ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="Découvrir le projet ${t}">${art(s)}</a><div class="demo-caption"><span class="tag">${c} · ${isExt ? 'Projet Réel' : 'Démonstration'}</span><h3><a href="${linkUrl}" ${isExt ? 'target="_blank" rel="noopener noreferrer"' : ''}>${t} ↗</a></h3><p>${d}</p></div></article>`).join('')}</div>`;
 
   // APERÇU SYNTHÉTIQUE & PERCUTANT POUR LA PAGE D'ACCUEIL (PAS DE SURCHARGE COGNITIVE)
   const homePricesOverview = () => `
@@ -128,18 +128,9 @@ export function upgrade(pages, { add, head, section, cta, prices, faq, steps, li
           <div class="hero-scene" data-tilt>
             <div class="hero-devices-showcase">
               <picture>
-                <source media="(max-width: 760px)" srcset="/photos/devices-hero-mobile.webp?v=${assetVer}" type="image/webp">
-                <source media="(max-width: 760px)" srcset="/photos/devices-hero-mobile.jpg?v=${assetVer}" type="image/jpeg">
                 <source srcset="/photos/devices-hero.webp?v=${assetVer}" type="image/webp">
                 <img src="/photos/devices-hero.jpg?v=${assetVer}" alt="Démonstration d'un site web professionnel sur smartphone et ordinateur par WEB AFRICA" width="1200" height="896" fetchpriority="high" decoding="async" class="hero-devices-img">
               </picture>
-              <div class="devices-badge-floating">
-                <span class="badge-glow-dot"></span>
-                <div>
-                  <strong>Affichage Multi-Écrans</strong>
-                  <span>PC portable &amp; Smartphone</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -254,10 +245,10 @@ export function upgrade(pages, { add, head, section, cta, prices, faq, steps, li
         <div class="wrap">
           <div class="sectionhead">
             <div>
-              <span class="eyebrow-cyan">— PREUVES CONCRÈTES &amp; PROTOTYPES</span>
-              <h2>Nos démonstrations réelles : projetez-vous tout de suite.</h2>
+              <span class="eyebrow-cyan">— PORTFOLIO &amp; RÉALISATIONS</span>
+              <h2>Nos projets réels &amp; démonstrations : projetez-vous tout de suite.</h2>
             </div>
-            <p>Testez nos concepts fonctionnels créés pour les entreprises du Burkina Faso : affichage smartphone, fiches produits, devis et réservations WhatsApp.</p>
+            <p>Découvrez nos réalisations concrètes pour des entreprises au Burkina Faso ainsi que nos prototypes sectoriels : affichage smartphone ultra-fluide, outils sur mesure et conversion WhatsApp.</p>
           </div>
           ${gallery()}
           <div class="section-foot">
@@ -311,17 +302,17 @@ export function upgrade(pages, { add, head, section, cta, prices, faq, steps, li
   // MISE À JOUR PROPRE DES PAGES DÉMONSTRATIONS (ZÉRO DUPLICATION AVEC RÉALISATIONS)
   for (const p of pages) {
     if (p.slug === 'demonstrations') {
-      p.title = 'Nos démonstrations — Savoir-faire web | WEB AFRICA';
-      p.body = head('Notre savoir-faire.<br>Vos prochaines idées.', 'Des concepts graphiques originaux pour montrer comment nous organisons les contenus, construisons une identité et préparons le contact.', 'Nos démonstrations') +
-        section(`<p class="demo-intro"><strong>Des démonstrations conçues pour votre secteur.</strong> Horizon BTP, Cap Conseil et Savana sont des modèles prêts à être adaptés à votre entreprise, vos couleurs et vos contenus réels. Chaque site est consultable avec ses pages et son parcours de contact.</p><div class="filters" aria-label="Filtrer les démonstrations"><button aria-pressed="true" data-filter="all">Tout explorer</button><button aria-pressed="false" data-filter="btp">BTP</button><button aria-pressed="false" data-filter="cabinet">Conseil</button><button aria-pressed="false" data-filter="restaurant">Restaurant</button></div>${gallery()}`) +
+      p.title = 'Nos réalisations & démonstrations — Savoir-faire web | WEB AFRICA';
+      p.body = head('Notre savoir-faire.<br>Vos prochaines idées.', 'Des réalisations concrètes et des concepts originaux pour montrer comment nous organisons les contenus, construisons une identité et préparons le contact.', 'Portfolio & Réalisations') +
+        section(`<p class="demo-intro"><strong>Des réalisations et démonstrations conçues pour votre secteur.</strong> ZENITH VISION, ZIDOMA GLOBAL LOGISTICS et le concept Savana sont des modèles réels et fonctionnels adaptés aux entreprises du Burkina Faso. Chaque site est consultable en direct.</p><div class="filters" aria-label="Filtrer les démonstrations"><button aria-pressed="true" data-filter="all">Tout explorer</button><button aria-pressed="false" data-filter="zenith">Communication Visuelle</button><button aria-pressed="false" data-filter="zgl">Logistique &amp; B2B</button><button aria-pressed="false" data-filter="restaurant">Restaurant</button></div>${gallery()}`) +
         cta();
     } else if (p.slug.startsWith('demonstrations/')) {
       const type = p.slug.split('/')[1];
       const match = demos.find(d => d[0] === type);
       if (match) {
         const [, name, sector, desc] = match;
-        p.title = `${name} — Démonstration créative | WEB AFRICA`;
-        p.body = head(`${name}<br>${sector}.`, desc, 'Démonstration WEB AFRICA') +
+        p.title = `${name} — Réalisation & Démonstration | WEB AFRICA`;
+        p.body = head(`${name}<br>${sector}.`, desc, 'Réalisation & Démonstration WEB AFRICA') +
           section(`<div class="demo-detail-art" data-tilt>${art(type)}</div><div class="split demo-detail"><article class="prose"><h2>L’intention</h2><p>${desc}</p><h2>Les choix graphiques</h2><p>${type === 'btp' ? 'Volumes architecturaux, grands titres et palette bleue : une identité structurée qui donne de la place aux chantiers.' : type === 'cabinet' ? 'Une typographie expressive, un signe directionnel et un contraste marqué pour souligner la clarté de l’accompagnement.' : 'Ambiance chaleureuse aux tons terre cuite et or, photographies de viandes braisées savoureuses et boutons WhatsApp directs pour éveiller l’appétit.'}</p><h2>Le parcours proposé</h2><ol><li>Comprendre l’ambiance et les spécialités de l’établissement.</li><li>Consulter la carte interactive avec prix clairs en FCFA.</li><li>Réserver sa table ou commander directement sur WhatsApp.</li></ol><h2>Ce que vous voyez ici</h2><p>Un modèle sectoriel prêt à l’emploi, créé pour vous projeter. Vos vrais contenus, photos de vos plats et coordonnées remplaceront ces éléments de démonstration.</p></article><aside class="aside"><h3>Une direction qui vous parle ?</h3><p>Adaptons-la à votre établissement, à votre carte et à vos spécialités.</p>${contact('Préparer mon brief', 'btn-popy-primary', '?offre=Pack%20Vitrine%20Essentiel')}<p><a class="btn-popy-glass" href="/demos/${type}/">Visiter le site de démonstration ↗</a></p>${link('demonstrations', 'Toutes les démonstrations', 'textlink')}</aside></div>`) +
           cta();
       }

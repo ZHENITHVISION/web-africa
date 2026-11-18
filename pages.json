@@ -46,22 +46,22 @@
   },
   {
     "slug": "demonstrations",
-    "title": "Nos démonstrations — Savoir-faire web | WEB AFRICA",
+    "title": "Nos réalisations & démonstrations — Savoir-faire web | WEB AFRICA",
     "description": "Explorez trois concepts de sites BTP, cabinet et restaurant. Démonstrations de l’approche graphique et des parcours de contact WEB AFRICA."
   },
   {
-    "slug": "demonstrations/btp",
-    "title": "Horizon BTP — Démonstration créative | WEB AFRICA",
-    "description": "Plateforme corporate BTP : chantiers d’envergure, parc d’engins lourds et devis WhatsApp."
+    "slug": "demonstrations/zenith",
+    "title": "ZENITH VISION — Réalisation & Démonstration | WEB AFRICA",
+    "description": "Kakémonos grande base 85x200, roll-up dos gris, identités de marque et vidéos IA en 48H."
   },
   {
-    "slug": "demonstrations/cabinet",
-    "title": "Cap Conseil — Démonstration créative | WEB AFRICA",
-    "description": "Une présentation sobre des missions et un parcours de prise de contact."
+    "slug": "demonstrations/zgl",
+    "title": "ZIDOMA GLOBAL LOGISTICS — Réalisation & Démonstration | WEB AFRICA",
+    "description": "Fournitures certifiées, maintenance technique industrielle et location de véhicules & engins."
   },
   {
     "slug": "demonstrations/restaurant",
-    "title": "Savana — Démonstration créative | WEB AFRICA",
+    "title": "Savana — Réalisation & Démonstration | WEB AFRICA",
     "description": "Une vitrine gourmande avec carte interactive, spécialités sahéliennes et réservations WhatsApp."
   },
   {
