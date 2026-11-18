@@ -129,7 +129,7 @@ export function upgrade(pages, { add, head, section, cta, prices, faq, steps, li
             <div class="hero-devices-showcase">
               <picture>
                 <source srcset="/photos/devices-hero.webp?v=${assetVer}" type="image/webp">
-                <img src="/photos/devices-hero.jpg?v=${assetVer}" alt="Démonstration d'un site web professionnel sur smartphone et ordinateur par WEB AFRICA" width="1200" height="896" fetchpriority="high" decoding="async" class="hero-devices-img">
+                <img src="/photos/devices-hero.png?v=${assetVer}" alt="Site WEB AFRICA affiché sur ordinateur portable et smartphone" width="1024" height="612" fetchpriority="high" decoding="async" class="hero-devices-img">
               </picture>
             </div>
           </div>
